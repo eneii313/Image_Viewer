@@ -1,6 +1,5 @@
 #include "BaseRunner.h"
 #include  "GameObjectManager.h"
-#include "BGObject.h"
 #include "TextureManager.h"
 #include "TextureDisplay.h"
 #include "FPSCounter.h"
@@ -25,20 +24,30 @@ float BaseRunner::getFPS() {
 }
 
 BaseRunner::BaseRunner() :
-	window(sf::VideoMode(WINDOW_WIDTH, WINDOW_HEIGHT), "HO: Entity Component", sf::Style::Close) {
+	window(sf::VideoMode(WINDOW_WIDTH, WINDOW_HEIGHT), "P2: Photo Viewer", sf::Style::Close) {
 
 	instance = this;
 	this->window.setFramerateLimit(int(FRAME_RATE));
+
+	sf::Font* font = new sf::Font();
+	font->loadFromFile("Media/Roboto.ttf");
+
+	this->header.setString("All Photos");
+	this->header.setFont(*font);
+	this->header.setCharacterSize(36);
+	this->header.setFillColor(sf::Color::White);
+	this->header.setPosition(padding, padding);
+
+	// testing loading icon
+	this->loadingIcon = new LoadingIcon(50, 300, 300);
+	this->loadingIcon->initialize();
 
 	//load initial textures
 	TextureManager::getInstance()->loadFromAssetList();
 
 	//load objects
-	BGObject* bgObject = new BGObject("BGObject");
-	GameObjectManager::getInstance()->addObject(bgObject);
-
-	TextureDisplay* display = new TextureDisplay();
-	GameObjectManager::getInstance()->addObject(display);
+	//TextureDisplay* display = new TextureDisplay();
+	//GameObjectManager::getInstance()->addObject(display);
 
 	FPSCounter* fpsCounter = new FPSCounter();
 	GameObjectManager::getInstance()->addObject(fpsCounter);
@@ -48,6 +57,8 @@ void BaseRunner::run() {
 	sf::Clock clock;
 	sf::Time previousTime = clock.getElapsedTime();
 	sf::Time currentTime;
+	
+
 	while (this->window.isOpen())
 	{
 		currentTime = clock.getElapsedTime();
@@ -80,10 +91,14 @@ void BaseRunner::processEvents()
 
 void BaseRunner::update(sf::Time elapsedTime) {
 	GameObjectManager::getInstance()->update(elapsedTime);
+	this->loadingIcon->update(elapsedTime);
 }
 
 void BaseRunner::render() {
-	this->window.clear();
+	this->window.clear(sf::Color(37,37,40));
+	this->window.draw(header);
+	this->loadingIcon->draw(window);
+
 	GameObjectManager::getInstance()->draw(&this->window);
 	this->window.display();
 }
