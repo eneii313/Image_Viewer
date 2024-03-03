@@ -1,37 +1,25 @@
 #include "LoadingIcon.h"
 #include <iostream>
 
-LoadingIcon::LoadingIcon(int radius, int posX, int posY) {
-	this->radius = radius;
-	this->posX = posX;
-	this->posY = posY;
-	this->angle = 0;
+LoadingIcon::LoadingIcon(int posX, int posY) {
 
 	// set texture icon
 	if (!this->icon.loadFromFile("Media/loading_icon.png"))
-		this->circle.setFillColor(sf::Color::Red);
-}
+		std::cerr<<"Failed to load loading icon" << std::endl;
 
-void LoadingIcon::initialize() {
-	this->angle = 0;
-	this->circle.setRadius(radius);
-	this->circle.setFillColor(sf::Color::Red);
-	this->circle.setOrigin(radius, radius);
-	this->circle.setPosition(posX, posY);
-	this->circle.setTexture(&icon);
-
+	this->sprite.setTexture(this->icon);
+	this->sprite.setColor(sf::Color(0,175,215));
+	this->sprite.setOrigin(icon.getSize().x / 2.0f, icon.getSize().y / 2.0f);
+	this->sprite.setPosition(posX, posY);
 }
 
 void LoadingIcon::draw(sf::RenderWindow& window) {
-	window.draw(this->circle);
+	window.draw(this->sprite);
 }
 
 void LoadingIcon::update(sf::Time deltaTime) {
 	// update rotation angle
-	this->angle += rot_speed * deltaTime.asSeconds();
-
-	if (this->angle >= 360)
-		this->angle -= 360;
-
-	this->circle.setRotation(this->angle);
+	float rotation = this->sprite.getRotation();
+	rotation += rot_speed * deltaTime.asSeconds();
+	this->sprite.setRotation(rotation);
 }

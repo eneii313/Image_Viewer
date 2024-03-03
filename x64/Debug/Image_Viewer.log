@@ -1,7 +1,4 @@
 ﻿  LoadingIcon.cpp
-C:\Users\JVC\Documents\Y4-T2\STDISCM\STDISCM_Workbench\Image_Viewer\LoadingIcon.cpp(17,25): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-C:\Users\JVC\Documents\Y4-T2\STDISCM\STDISCM_Workbench\Image_Viewer\LoadingIcon.cpp(19,33): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-C:\Users\JVC\Documents\Y4-T2\STDISCM\STDISCM_Workbench\Image_Viewer\LoadingIcon.cpp(19,25): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-C:\Users\JVC\Documents\Y4-T2\STDISCM\STDISCM_Workbench\Image_Viewer\LoadingIcon.cpp(20,33): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-C:\Users\JVC\Documents\Y4-T2\STDISCM\STDISCM_Workbench\Image_Viewer\LoadingIcon.cpp(20,27): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\JVC\Documents\Y4-T2\STDISCM\STDISCM_Workbench\Image_Viewer\LoadingIcon.cpp(13,33): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\JVC\Documents\Y4-T2\STDISCM\STDISCM_Workbench\Image_Viewer\LoadingIcon.cpp(13,27): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
   Image_Viewer.vcxproj -> C:\Users\JVC\Documents\Y4-T2\STDISCM\STDISCM_Workbench\Image_Viewer\x64\Debug\Image_Viewer.exe

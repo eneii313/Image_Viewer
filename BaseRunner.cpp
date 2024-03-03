@@ -39,8 +39,7 @@ BaseRunner::BaseRunner() :
 	this->header.setPosition(padding, padding);
 
 	// testing loading icon
-	this->loadingIcon = new LoadingIcon(50, 300, 300);
-	this->loadingIcon->initialize();
+	this->loadingIcon = new LoadingIcon(300, 300);
 
 	//load initial textures
 	TextureManager::getInstance()->loadFromAssetList();
