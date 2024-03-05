@@ -1,0 +1,5 @@
+﻿  BaseRunner.cpp
+C:\Users\USER\Documents\STDISCM\Image_Viewer\BaseRunner.cpp(48,81): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\USER\Documents\STDISCM\Image_Viewer\BaseRunner.cpp(48,48): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\USER\Documents\STDISCM\Image_Viewer\BaseRunner.cpp(48,30): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+  Image_Viewer.vcxproj -> C:\Users\USER\Documents\STDISCM\Image_Viewer\x64\Debug\Image_Viewer.exe

@@ -39,17 +39,29 @@ BaseRunner::BaseRunner() :
 	this->header.setPosition(padding, padding);
 
 	// testing loading icon
-	this->loadingIcon = new LoadingIcon(300, 300);
+	this->loadingIcon = new LoadingIcon(250, 250);
 
 	//load initial textures
-	TextureManager::getInstance()->loadFromAssetList();
+	//TextureManager::getInstance()->loadFromAssetList();
 
 	//load objects
+	this->gallery = new Gallery(padding, padding*2+36, WINDOW_WIDTH, WINDOW_HEIGHT - (padding*2+36));
+	
+	for (int i = 0; i < 40; ++i) {
+		// TODO: i < *count images*
+		std::stringstream path;
+		path << "Media/Images/" << std::setw(2) << std::setfill('0') << i+1 << ".jpg";
+		gallery->addImage(path.str());
+	}
+	
+	this->gallery->updateImagePositions();
 	//TextureDisplay* display = new TextureDisplay();
 	//GameObjectManager::getInstance()->addObject(display);
 
 	FPSCounter* fpsCounter = new FPSCounter();
 	GameObjectManager::getInstance()->addObject(fpsCounter);
+
+	this->initCenter = this->window.getView().getCenter();
 }
 
 void BaseRunner::run() {
@@ -84,6 +96,16 @@ void BaseRunner::processEvents()
 			this->window.close();
 			break;
 
+	
+		case sf::Event::MouseWheelScrolled:
+			sf::View view = window.getView();
+			view.move(0, -event.mouseWheelScroll.delta * 100);
+			
+			// make sure the view doesn't scroll past the top of the object
+			if (view.getCenter().y - view.getSize().y / 2.f < 0) {
+				view.setCenter(this->initCenter);
+			}
+			window.setView(view);
 		}
 	}
 }
@@ -95,9 +117,12 @@ void BaseRunner::update(sf::Time elapsedTime) {
 
 void BaseRunner::render() {
 	this->window.clear(sf::Color(37,37,40));
+
 	this->window.draw(header);
 	this->loadingIcon->draw(window);
+	this->gallery->draw(window);
 
-	GameObjectManager::getInstance()->draw(&this->window);
+	//GameObjectManager::getInstance()->draw(&this->window);
+
 	this->window.display();
 }

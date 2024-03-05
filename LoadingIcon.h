@@ -3,7 +3,6 @@
 class LoadingIcon {
 public:
 	LoadingIcon(int posX, int posY);
-	void initialize();
 	void draw(sf::RenderWindow& window);
 	void update(sf::Time deltaTime);
 

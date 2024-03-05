@@ -15,9 +15,6 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\..\..\..\Downloads\GDPARCM_HO2 - Class Template\GDPARCM_HO2 - Class Template\MathUtils.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="AssetLoader.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -66,11 +63,11 @@
     <ClCompile Include="LoadingIcon.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Gallery.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\..\..\..\Downloads\GDPARCM_HO2 - Class Template\GDPARCM_HO2 - Class Template\MathUtils.h">
-      <Filter>Source Files</Filter>
-    </ClInclude>
     <ClInclude Include="AssetLoader.h">
       <Filter>Source Files</Filter>
     </ClInclude>
@@ -114,6 +111,9 @@
       <Filter>Source Files</Filter>
     </ClInclude>
     <ClInclude Include="LoadingIcon.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Gallery.h">
       <Filter>Source Files</Filter>
     </ClInclude>
   </ItemGroup>

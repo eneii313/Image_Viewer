@@ -1,6 +1,11 @@
 #include <SFML/Graphics.hpp>
 #include <vector>
+#include <iostream>
+#include <string>
+#include <iomanip>
+#include <sstream>
 #include "LoadingIcon.h"
+#include "Gallery.h"
 
 using namespace std;
 class BaseRunner : private sf::NonCopyable
@@ -24,9 +29,12 @@ private:
 	sf::RenderWindow window;
 	sf::Text header;
 	LoadingIcon* loadingIcon;
+	Gallery* gallery;
 
 	float padding = 25.0f;
 	float fps = 0.0f;
+
+	sf::Vector2f initCenter;
 
 	void render();
 	void processEvents();

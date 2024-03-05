@@ -105,12 +105,12 @@
       <PreprocessorDefinitions>SFML_STATIC;_DEBUG;_CONSOLE</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <LanguageStandard>stdcpp20</LanguageStandard>
-      <AdditionalIncludeDirectories>C:\Users\JVC\Downloads\SFML-2.6.1-windows-vc17-64-bit\SFML-2.6.1\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\USER\Downloads\SFML-2.6.1-windows-vc17-64-bit\SFML-2.6.1\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalLibraryDirectories>C:\Users\JVC\Downloads\SFML-2.6.1-windows-vc17-64-bit\SFML-2.6.1\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>C:\Users\USER\Downloads\SFML-2.6.1-windows-vc17-64-bit\SFML-2.6.1\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalDependencies>freetype.lib;opengl32.lib;winmm.lib;gdi32.lib;sfml-graphics-s-d.lib;sfml-window-s-d.lib;sfml-system-s-d.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
@@ -135,11 +135,11 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\..\..\..\Downloads\GDPARCM_HO2 - Class Template\GDPARCM_HO2 - Class Template\MathUtils.cpp" />
     <ClCompile Include="AGameObject.cpp" />
     <ClCompile Include="AssetLoader.cpp" />
     <ClCompile Include="BaseRunner.cpp" />
     <ClCompile Include="FPSCounter.cpp" />
+    <ClCompile Include="Gallery.cpp" />
     <ClCompile Include="GameObjectManager.cpp" />
     <ClCompile Include="IconObject.cpp" />
     <ClCompile Include="IETThread.cpp" />
@@ -154,11 +154,11 @@
     <ClCompile Include="ThreadPool.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\..\..\..\Downloads\GDPARCM_HO2 - Class Template\GDPARCM_HO2 - Class Template\MathUtils.h" />
     <ClInclude Include="AGameObject.h" />
     <ClInclude Include="AssetLoader.h" />
     <ClInclude Include="BaseRunner.h" />
     <ClInclude Include="FPSCounter.h" />
+    <ClInclude Include="Gallery.h" />
     <ClInclude Include="GameObjectManager.h" />
     <ClInclude Include="IconObject.h" />
     <ClInclude Include="IETThread.h" />

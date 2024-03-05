@@ -38,7 +38,7 @@ private:
 	TextureList streamTextureList;
 	ThreadPool* threadPool;
 
-	const std::string STREAMING_PATH = "Media/Streaming/";
+	const std::string STREAMING_PATH = "Media/Images/"; // "Media/Streaming/";
 	int streamingAssetCount = 0;
 
 	void countStreamingAssets();
