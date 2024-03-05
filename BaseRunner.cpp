@@ -4,6 +4,8 @@
 #include "TextureDisplay.h"
 #include "FPSCounter.h"
 
+#include "GalleryManager.h"
+
 /// <summary>
 /// This demonstrates a running parallax background where after X seconds, a batch of assets will be streamed and loaded.
 /// </summary>
@@ -42,18 +44,25 @@ BaseRunner::BaseRunner() :
 	this->loadingIcon = new LoadingIcon(250, 250);
 
 	//load initial textures
-	//TextureManager::getInstance()->loadFromAssetList();
 
-	//load objects
+	//load initial gallery
 	this->gallery = new Gallery(padding, padding*2+36, WINDOW_WIDTH, WINDOW_HEIGHT - (padding*2+36));
-	
-	for (int i = 0; i < 40; ++i) {
-		// TODO: i < *count images*
+
+	/*
+	namespace fs = std::filesystem;
+	std::string path = "Media/Images/";
+	for (const auto& entry : fs::directory_iterator(path)) {
+		if (entry.is_regular_file()) {
+			gallery->addImage(entry.path().string());
+		}
+	}*/
+	/*
+	for (int i = 0; i <  INITIAL_IMAGE_COUNT; ++i) {
 		std::stringstream path;
 		path << "Media/Images/" << std::setw(2) << std::setfill('0') << i+1 << ".jpg";
 		gallery->addImage(path.str());
 	}
-	
+	*/
 	this->gallery->updateImagePositions();
 	//TextureDisplay* display = new TextureDisplay();
 	//GameObjectManager::getInstance()->addObject(display);
@@ -111,8 +120,9 @@ void BaseRunner::processEvents()
 }
 
 void BaseRunner::update(sf::Time elapsedTime) {
+	GalleryManager::getInstance()->update(elapsedTime);
 	GameObjectManager::getInstance()->update(elapsedTime);
-	this->loadingIcon->update(elapsedTime);
+	//this->loadingIcon->update(elapsedTime);
 }
 
 void BaseRunner::render() {
@@ -122,7 +132,7 @@ void BaseRunner::render() {
 	this->loadingIcon->draw(window);
 	this->gallery->draw(window);
 
-	//GameObjectManager::getInstance()->draw(&this->window);
-
+	GalleryManager::getInstance()->draw(this->window);
+	GameObjectManager::getInstance()->draw(&this->window);
 	this->window.display();
 }

@@ -33,6 +33,7 @@ private:
 
 	float padding = 25.0f;
 	float fps = 0.0f;
+	const int INITIAL_IMAGE_COUNT = 12; //4*3
 
 	sf::Vector2f initCenter;
 

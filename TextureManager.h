@@ -26,6 +26,7 @@ public:
 
 	void instantiateAsTexture(String path, String assetName, bool isStreaming);
 
+	void loadAssets();
 
 private:
 	TextureManager();

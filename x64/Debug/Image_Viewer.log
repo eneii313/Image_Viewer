@@ -1,4 +1,10 @@
-﻿  LoadingIcon.cpp
-C:\Users\JVC\Documents\Y4-T2\STDISCM\STDISCM_Workbench\Image_Viewer\LoadingIcon.cpp(13,33): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-C:\Users\JVC\Documents\Y4-T2\STDISCM\STDISCM_Workbench\Image_Viewer\LoadingIcon.cpp(13,27): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+﻿  BaseRunner.cpp
+C:\Users\JVC\Documents\Y4-T2\STDISCM\STDISCM_Workbench\Image_Viewer\BaseRunner.cpp(49,81): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\JVC\Documents\Y4-T2\STDISCM\STDISCM_Workbench\Image_Viewer\BaseRunner.cpp(49,48): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\JVC\Documents\Y4-T2\STDISCM\STDISCM_Workbench\Image_Viewer\BaseRunner.cpp(49,30): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+  TextureDisplay.cpp
+C:\Users\JVC\Documents\Y4-T2\STDISCM\STDISCM_Workbench\Image_Viewer\TextureDisplay.cpp(48,70): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\JVC\Documents\Y4-T2\STDISCM\STDISCM_Workbench\Image_Viewer\TextureDisplay.cpp(53,10): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+C:\Users\JVC\Documents\Y4-T2\STDISCM\STDISCM_Workbench\Image_Viewer\TextureDisplay.cpp(54,10): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+  Generating Code...
   Image_Viewer.vcxproj -> C:\Users\JVC\Documents\Y4-T2\STDISCM\STDISCM_Workbench\Image_Viewer\x64\Debug\Image_Viewer.exe

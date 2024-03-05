@@ -8,6 +8,8 @@ public:
 	void addImage(std::string texturePath);
 	void updateImagePositions();
 	void draw(sf::RenderWindow& window);
+
+	std::vector<sf::Sprite> images;
 private:
 	const int COLUMNS = 4;
 	const int ROWS = 3;
@@ -16,6 +18,4 @@ private:
 	float iconSizeY;
 	const float iconPadding = 20.0f;
 
-
-	std::vector<sf::Sprite> images;
 };
