@@ -33,11 +33,12 @@ private:
 	float padding = 25.0f;
 	float fps = 0.0f;
 	float maxScrollHeight = WINDOW_HEIGHT;
+	sf::Time lastClickTime = sf::Time::Zero;
 
 	sf::Vector2f initCenter;
 
 	void render();
-	void processEvents();
+	void processEvents(sf::Clock clock);
 	void update(sf::Time elapsedTime);
 };
 

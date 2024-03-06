@@ -65,3 +65,19 @@ void ImageObject::draw(sf::RenderWindow& window) {
 		window.draw(border);
 	}
 }
+
+bool ImageObject::isMouseOver(const sf::Vector2f& mousePosition) {
+	sf::FloatRect bounds = this->sprite.getGlobalBounds();
+	return bounds.contains(mousePosition);
+}
+
+void ImageObject::handleDoubleClick() {
+	// std::cout << "Double-click on image object detected! Index " << std::endl;
+}
+
+/*
+// Implementation of getGlobalBounds function
+sf::FloatRect ImageObject::getGlobalBounds() const {
+	return sf::FloatRect(this->sprite.getPosition().x, this->sprite.getPosition().y, this->iconSizeX, this->iconSizeY);
+}
+*/

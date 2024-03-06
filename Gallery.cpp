@@ -73,6 +73,8 @@ void Gallery::loadAllImageTextures() {
 		std::string texturePath = this->texturePath.at(i);
 		
 		this->images[i]->setTexture(texturePath);
+
+		// std::cout << "Image " << i <<" Texture path" << texturePath << std::endl;
 	}
 
 }
@@ -87,4 +89,18 @@ float Gallery::computeGalleryHeight() {
 
 	// Calculate the maximum allowable position based on the total image height
 	return totalImageHeight - BaseRunner::WINDOW_HEIGHT + 100;
+}
+
+
+void Gallery::handleDoubleClick(sf::Vector2f mousePosition) {
+	int i = 0;
+	for (auto& imageObject : this->images) {
+		if (imageObject->isMouseOver(mousePosition)) {
+			// Handle double-click event for the image object
+			std::cout << "Double-click on image object detected! Image " << this->texturePath.at(i) << std::endl;
+			//imageObject->handleDoubleClick();
+			break;
+		}
+		i++;
+	}
 }

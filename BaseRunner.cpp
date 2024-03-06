@@ -57,7 +57,7 @@ void BaseRunner::run() {
 		float deltaTime = currentTime.asSeconds() - previousTime.asSeconds();
 		this->fps = floor(1.0f / deltaTime);
 
-		processEvents();
+		processEvents(clock);
 		update(sf::seconds(1.0f / this->fps));
 		render();
 
@@ -66,8 +66,9 @@ void BaseRunner::run() {
 
 }
 
-void BaseRunner::processEvents()
+void BaseRunner::processEvents(sf::Clock clock)
 {
+	sf::View view = window.getView();
 	sf::Event event;
 	if (this->window.pollEvent(event)) {
 		switch (event.type) {
@@ -76,12 +77,24 @@ void BaseRunner::processEvents()
 		case sf::Event::Closed:
 			this->window.close();
 			break;
+		
+		case sf::Event::MouseButtonPressed:
+			if (event.mouseButton.button == sf::Mouse::Left) {
+				sf::Time currentTime = clock.getElapsedTime();
+				if (currentTime - lastClickTime < sf::seconds(0.5)) {
+					sf::Vector2i screenCoords(event.mouseButton.x, event.mouseButton.y);
+					sf::Vector2f worldCoords = window.mapPixelToCoords(screenCoords, view);
+					// Check if mouse position is over any image object
+					this->gallery->handleDoubleClick(worldCoords);
+				}
 
-	
+				lastClickTime = currentTime;
+			}
+			break;
+
 		case sf::Event::MouseWheelScrolled:
-			sf::View view = window.getView();
 			view.move(0, -event.mouseWheelScroll.delta * 100);
-			
+
 			// make sure the view doesn't scroll past the top of the object
 			if (view.getCenter().y - view.getSize().y / 2.f < 0) {
 				view.setCenter(this->initCenter);
@@ -94,6 +107,7 @@ void BaseRunner::processEvents()
 			window.setView(view);
 
 			this->fpsCounter->draw(window);
+			break;
 		}
 	}
 }
