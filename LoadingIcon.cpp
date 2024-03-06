@@ -16,7 +16,7 @@ LoadingIcon::LoadingIcon(int posX, int posY, float scale) {
 
 void LoadingIcon::setPosition(int posX, int posY) {
 	this->sprite.setPosition(posX, posY);
-	std::cout << "Settingloading icon at " << posX << ", " << posY << std::endl;
+	//std::cout << "Settingloading icon at " << posX << ", " << posY << std::endl;
 }
 
 void LoadingIcon::draw(sf::RenderWindow& window) {

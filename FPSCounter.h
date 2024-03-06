@@ -1,14 +1,14 @@
 #pragma once
-#include "AGameObject.h"
-class FPSCounter : public AGameObject
-{
+#include <SFML/Graphics.hpp>
+
+class FPSCounter {
 public:
 	FPSCounter();
-	~FPSCounter();
-	void initialize() override;
-	void processInput(sf::Event event) override;
-	void update(sf::Time deltaTime) override;
-	void draw(sf::RenderWindow* targetWindow) override;
+	void processInput(sf::Event event);
+	void update(sf::Time deltaTime);
+	void draw(sf::RenderWindow& window);
+
+	void updateFPSPosition(int posY);
 
 private:
 	sf::Time updateTime;

@@ -1,7 +1,7 @@
 #pragma once
 #include <iostream>
 #include "ImageObject.h"
-
+#include <thread>
 
 ImageObject::ImageObject(int posX, int posY, int iconSizeX, int iconSizeY) {
 	this->textureLoaded = false;
@@ -9,7 +9,6 @@ ImageObject::ImageObject(int posX, int posY, int iconSizeX, int iconSizeY) {
 	this->iconSizeX = iconSizeX;
 	this->iconSizeY = iconSizeY;
 
-	this->sprite = sf::Sprite();
 	this->sprite.setPosition(posX, posY);
 
 	// setup loading icon
@@ -22,6 +21,7 @@ ImageObject::ImageObject(int posX, int posY, int iconSizeX, int iconSizeY) {
 	border.setOutlineColor(sf::Color(70, 70, 77));
 }
 
+// TODO: move loading texture into gallery
 void ImageObject::setTexture(std::string texturePath) {
 	sf::Texture* texture = new sf::Texture();
 	if (!texture->loadFromFile(texturePath))
@@ -29,13 +29,14 @@ void ImageObject::setTexture(std::string texturePath) {
 
 	this->sprite.setTexture(*texture);
 
-	float scaleX = this->iconSizeX / texture->getSize().x;
-	float scaleY = this->iconSizeY / texture->getSize().y;
+	float scaleX = static_cast<float>(this->iconSizeX) / texture->getSize().x;
+	float scaleY = static_cast<float>(this->iconSizeY) / texture->getSize().y;
 
 	// resize image texture
 	this->sprite.setScale(scaleX, scaleY);
 
 	this->textureLoaded = true;
+	//std::cout << texturePath + " loaded." << std::endl;
 }
 
 void ImageObject::setPosition(int posX, int posY) {

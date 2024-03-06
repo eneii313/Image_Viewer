@@ -4,9 +4,6 @@
 #include "TextureDisplay.h"
 #include "FPSCounter.h"
 
-/// <summary>
-/// This demonstrates a running parallax background where after X seconds, a batch of assets will be streamed and loaded.
-/// </summary>
 const float FRAME_RATE = 60.0f;
 const sf::Time BaseRunner::TIME_PER_FRAME = sf::seconds(1.0f / FRAME_RATE);
 BaseRunner* BaseRunner::instance = NULL;
@@ -38,26 +35,10 @@ BaseRunner::BaseRunner() :
 	this->header.setFillColor(sf::Color::White);
 	this->header.setPosition(padding, padding);
 
-	//load initial textures
-	//TextureManager::getInstance()->loadFromAssetList();
-
 	// initialize gallery view
 	this->gallery = new Gallery(padding, padding*2+36, WINDOW_WIDTH, WINDOW_HEIGHT - (padding*2+36));
 
-	/*
-	for (int i = 0; i < 40; ++i) {
-		std::stringstream path;
-		path << "Media/Images/" << std::setw(2) << std::setfill('0') << i+1 << ".jpg";
-		gallery->addImage(path.str());
-	}
-	
-	this->gallery->updateImagePositions();
-	//TextureDisplay* display = new TextureDisplay();
-	//GameObjectManager::getInstance()->addObject(display);
-	*/
-
-	FPSCounter* fpsCounter = new FPSCounter();
-	GameObjectManager::getInstance()->addObject(fpsCounter);
+	this->fpsCounter = new FPSCounter();
 
 	this->initCenter = this->window.getView().getCenter();
 }
@@ -67,6 +48,8 @@ void BaseRunner::run() {
 	sf::Time previousTime = clock.getElapsedTime();
 	sf::Time currentTime;
 	
+	this->gallery->addImageTextures();
+	this->maxScrollHeight = this->gallery->computeGalleryHeight();
 
 	while (this->window.isOpen())
 	{
@@ -103,14 +86,21 @@ void BaseRunner::processEvents()
 			if (view.getCenter().y - view.getSize().y / 2.f < 0) {
 				view.setCenter(this->initCenter);
 			}
+
+			sf::Vector2f topLeftOfWindow = view.getCenter() - view.getSize() / 2.f;
+			sf::Vector2f bottomRightOfWindow = topLeftOfWindow + view.getSize();
+			this->fpsCounter->updateFPSPosition(bottomRightOfWindow.y);
+
 			window.setView(view);
+
+			this->fpsCounter->draw(window);
 		}
 	}
 }
 
 void BaseRunner::update(sf::Time elapsedTime) {
 	this->gallery->update(elapsedTime);
-	GameObjectManager::getInstance()->update(elapsedTime);
+	this->fpsCounter->update(elapsedTime);
 }
 
 void BaseRunner::render() {
@@ -118,8 +108,8 @@ void BaseRunner::render() {
 
 	this->window.draw(header);
 	this->gallery->draw(window);
+	this->fpsCounter->draw(window);
 
-	GameObjectManager::getInstance()->draw(&this->window);
 
 	this->window.display();
 }

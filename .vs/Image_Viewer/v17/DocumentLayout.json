@@ -3,28 +3,28 @@
   "WorkspaceRootPath": "C:\\Users\\USER\\Documents\\STDISCM\\Image_Viewer\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{834369BA-6E1E-4123-ACAB-8D61C8FBBE2A}|Image_Viewer.vcxproj|C:\\Users\\USER\\Documents\\STDISCM\\Image_Viewer\\BaseRunner.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{834369BA-6E1E-4123-ACAB-8D61C8FBBE2A}|Image_Viewer.vcxproj|solutionrelative:BaseRunner.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{834369BA-6E1E-4123-ACAB-8D61C8FBBE2A}|Image_Viewer.vcxproj|C:\\Users\\USER\\Documents\\STDISCM\\Image_Viewer\\Gallery.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{834369BA-6E1E-4123-ACAB-8D61C8FBBE2A}|Image_Viewer.vcxproj|solutionrelative:Gallery.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{834369BA-6E1E-4123-ACAB-8D61C8FBBE2A}|Image_Viewer.vcxproj|C:\\Users\\USER\\Documents\\STDISCM\\Image_Viewer\\Gallery.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{834369BA-6E1E-4123-ACAB-8D61C8FBBE2A}|Image_Viewer.vcxproj|solutionrelative:Gallery.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{834369BA-6E1E-4123-ACAB-8D61C8FBBE2A}|Image_Viewer.vcxproj|C:\\Users\\USER\\Documents\\STDISCM\\Image_Viewer\\BaseRunner.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{834369BA-6E1E-4123-ACAB-8D61C8FBBE2A}|Image_Viewer.vcxproj|solutionrelative:BaseRunner.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{834369BA-6E1E-4123-ACAB-8D61C8FBBE2A}|Image_Viewer.vcxproj|C:\\Users\\USER\\Documents\\STDISCM\\Image_Viewer\\ImageObject.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{834369BA-6E1E-4123-ACAB-8D61C8FBBE2A}|Image_Viewer.vcxproj|solutionrelative:ImageObject.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{834369BA-6E1E-4123-ACAB-8D61C8FBBE2A}|Image_Viewer.vcxproj|C:\\Users\\USER\\Documents\\STDISCM\\Image_Viewer\\ImageObject.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{834369BA-6E1E-4123-ACAB-8D61C8FBBE2A}|Image_Viewer.vcxproj|solutionrelative:ImageObject.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{834369BA-6E1E-4123-ACAB-8D61C8FBBE2A}|Image_Viewer.vcxproj|C:\\Users\\USER\\Documents\\STDISCM\\Image_Viewer\\Gallery.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{834369BA-6E1E-4123-ACAB-8D61C8FBBE2A}|Image_Viewer.vcxproj|solutionrelative:Gallery.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{834369BA-6E1E-4123-ACAB-8D61C8FBBE2A}|Image_Viewer.vcxproj|C:\\Users\\USER\\Documents\\STDISCM\\Image_Viewer\\BaseRunner.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{834369BA-6E1E-4123-ACAB-8D61C8FBBE2A}|Image_Viewer.vcxproj|solutionrelative:BaseRunner.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{834369BA-6E1E-4123-ACAB-8D61C8FBBE2A}|Image_Viewer.vcxproj|C:\\Users\\USER\\Documents\\STDISCM\\Image_Viewer\\ImageObject.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{834369BA-6E1E-4123-ACAB-8D61C8FBBE2A}|Image_Viewer.vcxproj|solutionrelative:ImageObject.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     }
   ],
   "DocumentGroupContainers": [
@@ -39,79 +39,79 @@
             {
               "$type": "Document",
               "DocumentIndex": 4,
+              "Title": "BaseRunner.h",
+              "DocumentMoniker": "C:\\Users\\USER\\Documents\\STDISCM\\Image_Viewer\\BaseRunner.h",
+              "RelativeDocumentMoniker": "BaseRunner.h",
+              "ToolTip": "C:\\Users\\USER\\Documents\\STDISCM\\Image_Viewer\\BaseRunner.h",
+              "RelativeToolTip": "BaseRunner.h",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAABwAAAARAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-03-06T09:10:04.682Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "BaseRunner.cpp",
+              "DocumentMoniker": "C:\\Users\\USER\\Documents\\STDISCM\\Image_Viewer\\BaseRunner.cpp",
+              "RelativeDocumentMoniker": "BaseRunner.cpp",
+              "ToolTip": "C:\\Users\\USER\\Documents\\STDISCM\\Image_Viewer\\BaseRunner.cpp",
+              "RelativeToolTip": "BaseRunner.cpp",
+              "ViewState": "AQIAAEUAAAAAAAAAAAAAAF8AAAAiAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-03-06T08:01:18.887Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
               "Title": "ImageObject.h",
               "DocumentMoniker": "C:\\Users\\USER\\Documents\\STDISCM\\Image_Viewer\\ImageObject.h",
               "RelativeDocumentMoniker": "ImageObject.h",
               "ToolTip": "C:\\Users\\USER\\Documents\\STDISCM\\Image_Viewer\\ImageObject.h",
               "RelativeToolTip": "ImageObject.h",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAAAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAmAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
               "WhenOpened": "2024-03-06T04:29:28.874Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 2,
               "Title": "ImageObject.cpp",
               "DocumentMoniker": "C:\\Users\\USER\\Documents\\STDISCM\\Image_Viewer\\ImageObject.cpp",
               "RelativeDocumentMoniker": "ImageObject.cpp",
               "ToolTip": "C:\\Users\\USER\\Documents\\STDISCM\\Image_Viewer\\ImageObject.cpp",
               "RelativeToolTip": "ImageObject.cpp",
-              "ViewState": "AQIAAAkAAAAAAAAAAAAAABEAAAAyAAAA",
+              "ViewState": "AQIAABgAAAAAAAAAAAAAACUAAAAcAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2024-03-06T04:29:17.748Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "Gallery.h",
               "DocumentMoniker": "C:\\Users\\USER\\Documents\\STDISCM\\Image_Viewer\\Gallery.h",
               "RelativeDocumentMoniker": "Gallery.h",
               "ToolTip": "C:\\Users\\USER\\Documents\\STDISCM\\Image_Viewer\\Gallery.h",
               "RelativeToolTip": "Gallery.h",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABcAAAAAAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAAeAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
               "WhenOpened": "2024-03-04T04:23:39.922Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "Gallery.cpp",
               "DocumentMoniker": "C:\\Users\\USER\\Documents\\STDISCM\\Image_Viewer\\Gallery.cpp",
               "RelativeDocumentMoniker": "Gallery.cpp",
               "ToolTip": "C:\\Users\\USER\\Documents\\STDISCM\\Image_Viewer\\Gallery.cpp",
               "RelativeToolTip": "Gallery.cpp",
-              "ViewState": "AQIAAAYAAAAAAAAAAAAAABQAAAAxAAAA",
+              "ViewState": "AQIAADAAAAAAAAAAAAAAAFkAAAABAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2024-03-04T04:51:45.902Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "BaseRunner.h",
-              "DocumentMoniker": "C:\\Users\\USER\\Documents\\STDISCM\\Image_Viewer\\BaseRunner.h",
-              "RelativeDocumentMoniker": "BaseRunner.h",
-              "ToolTip": "C:\\Users\\USER\\Documents\\STDISCM\\Image_Viewer\\BaseRunner.h",
-              "RelativeToolTip": "BaseRunner.h",
-              "ViewState": "AQIAAAYAAAAAAAAAAAAAABwAAAARAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2024-03-05T10:40:20.615Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "BaseRunner.cpp",
-              "DocumentMoniker": "C:\\Users\\USER\\Documents\\STDISCM\\Image_Viewer\\BaseRunner.cpp",
-              "RelativeDocumentMoniker": "BaseRunner.cpp",
-              "ToolTip": "C:\\Users\\USER\\Documents\\STDISCM\\Image_Viewer\\BaseRunner.cpp",
-              "RelativeToolTip": "BaseRunner.cpp",
-              "ViewState": "AQIAAF0AAAAAAAAAAAAAAG4AAAAvAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2024-03-04T04:01:26.095Z",
               "EditorCaption": ""
             }
           ]

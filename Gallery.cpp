@@ -2,6 +2,8 @@
 #include <filesystem>
 #include "Gallery.h"
 #include "BaseRunner.h"
+#include "StringUtils.h"
+#include <thread>
 
 Gallery::Gallery(int posX, int posY, int windowWidth, int windowHeight) {
 	this->posX = posX;
@@ -16,24 +18,6 @@ Gallery::Gallery(int posX, int posY, int windowWidth, int windowHeight) {
 		this->images.push_back(imageObject);
 	}
 	updateImagePositions();
-}
-
-void Gallery::addImage(std::string texturePath) {
-	/*
-	sf::Texture* texture = new sf::Texture();
-	if (!texture->loadFromFile(texturePath))
-		std::cerr << texturePath + " not found." << std::endl;
-
-	sf::Sprite sprite(*texture);
-
-	float scaleX = this->iconSizeX / texture->getSize().x;
-	float scaleY = this->iconSizeY / texture->getSize().y;
-
-	// resize image texture
-	sprite.setScale(scaleX, scaleY);
-	
-	this->images.push_back(sprite);
-	*/
 }
 
 void Gallery::updateImagePositions() {
@@ -63,13 +47,44 @@ void Gallery::draw(sf::RenderWindow& window) {
 		image->draw(window);
 }
 
+// count all images in file path + add name into texture list
 void Gallery::countAllImages() {
 	namespace fs = std::filesystem;
 
 	this->allImagesCount = 0;
 	for (const auto& entry : fs::directory_iterator(STREAMING_PATH)) {
+		std::string path = entry.path().generic_string();
+		this->texturePath.emplace(allImagesCount, path);
 		this->allImagesCount++;
 	}
 
 	std::cout << "IMAGE COUNT: " << allImagesCount << std::endl;
+}
+
+void Gallery::addImageTextures() {
+	std::thread loadingThread(&Gallery::loadAllImageTextures, this);
+	loadingThread.detach();
+}
+
+// Load textures for all images
+void Gallery::loadAllImageTextures() {
+	for (size_t i = 0; i < this->images.size(); ++i) {
+		// std::this_thread::sleep_for(std::chrono::milliseconds(1000)); // try sleep
+		std::string texturePath = this->texturePath.at(i);
+		
+		this->images[i]->setTexture(texturePath);
+	}
+
+}
+
+
+// TODO: fix this if may time
+float Gallery::computeGalleryHeight() {
+	float totalImageHeight = 0.f;
+	for (const auto& image : this->images) {
+		totalImageHeight += this->iconSizeY + this->iconPadding;
+	}
+
+	// Calculate the maximum allowable position based on the total image height
+	return totalImageHeight - BaseRunner::WINDOW_HEIGHT + 100;
 }
