@@ -4,7 +4,6 @@
 #include <string>
 #include <iomanip>
 #include <sstream>
-#include "LoadingIcon.h"
 #include "Gallery.h"
 
 using namespace std;
@@ -28,7 +27,6 @@ private:
 
 	sf::RenderWindow window;
 	sf::Text header;
-	LoadingIcon* loadingIcon;
 	Gallery* gallery;
 
 	float padding = 25.0f;

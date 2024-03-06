@@ -2,7 +2,8 @@
 
 class LoadingIcon {
 public:
-	LoadingIcon(int posX, int posY);
+	LoadingIcon(int posX, int posY, float scale);
+	void setPosition(int posX, int posY);
 	void draw(sf::RenderWindow& window);
 	void update(sf::Time deltaTime);
 

@@ -1,7 +1,7 @@
 #include "LoadingIcon.h"
 #include <iostream>
 
-LoadingIcon::LoadingIcon(int posX, int posY) {
+LoadingIcon::LoadingIcon(int posX, int posY, float scale) {
 
 	// set texture icon
 	if (!this->icon.loadFromFile("Media/loading_icon.png"))
@@ -11,6 +11,12 @@ LoadingIcon::LoadingIcon(int posX, int posY) {
 	this->sprite.setColor(sf::Color(0,175,215));
 	this->sprite.setOrigin(icon.getSize().x / 2.0f, icon.getSize().y / 2.0f);
 	this->sprite.setPosition(posX, posY);
+	this->sprite.setScale(scale, scale);
+}
+
+void LoadingIcon::setPosition(int posX, int posY) {
+	this->sprite.setPosition(posX, posY);
+	std::cout << "Settingloading icon at " << posX << ", " << posY << std::endl;
 }
 
 void LoadingIcon::draw(sf::RenderWindow& window) {

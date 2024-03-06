@@ -38,17 +38,14 @@ BaseRunner::BaseRunner() :
 	this->header.setFillColor(sf::Color::White);
 	this->header.setPosition(padding, padding);
 
-	// testing loading icon
-	this->loadingIcon = new LoadingIcon(250, 250);
-
 	//load initial textures
 	//TextureManager::getInstance()->loadFromAssetList();
 
-	//load objects
+	// initialize gallery view
 	this->gallery = new Gallery(padding, padding*2+36, WINDOW_WIDTH, WINDOW_HEIGHT - (padding*2+36));
-	
+
+	/*
 	for (int i = 0; i < 40; ++i) {
-		// TODO: i < *count images*
 		std::stringstream path;
 		path << "Media/Images/" << std::setw(2) << std::setfill('0') << i+1 << ".jpg";
 		gallery->addImage(path.str());
@@ -57,6 +54,7 @@ BaseRunner::BaseRunner() :
 	this->gallery->updateImagePositions();
 	//TextureDisplay* display = new TextureDisplay();
 	//GameObjectManager::getInstance()->addObject(display);
+	*/
 
 	FPSCounter* fpsCounter = new FPSCounter();
 	GameObjectManager::getInstance()->addObject(fpsCounter);
@@ -111,18 +109,17 @@ void BaseRunner::processEvents()
 }
 
 void BaseRunner::update(sf::Time elapsedTime) {
+	this->gallery->update(elapsedTime);
 	GameObjectManager::getInstance()->update(elapsedTime);
-	this->loadingIcon->update(elapsedTime);
 }
 
 void BaseRunner::render() {
 	this->window.clear(sf::Color(37,37,40));
 
 	this->window.draw(header);
-	this->loadingIcon->draw(window);
 	this->gallery->draw(window);
 
-	//GameObjectManager::getInstance()->draw(&this->window);
+	GameObjectManager::getInstance()->draw(&this->window);
 
 	this->window.display();
 }

@@ -1,5 +1,21 @@
 ﻿  BaseRunner.cpp
-C:\Users\USER\Documents\STDISCM\Image_Viewer\BaseRunner.cpp(48,81): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-C:\Users\USER\Documents\STDISCM\Image_Viewer\BaseRunner.cpp(48,48): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-C:\Users\USER\Documents\STDISCM\Image_Viewer\BaseRunner.cpp(48,30): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\USER\Documents\STDISCM\Image_Viewer\BaseRunner.cpp(45,81): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\USER\Documents\STDISCM\Image_Viewer\BaseRunner.cpp(45,48): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\USER\Documents\STDISCM\Image_Viewer\BaseRunner.cpp(45,30): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+  FPSCounter.cpp
+C:\Users\USER\Documents\STDISCM\Image_Viewer\FPSCounter.cpp(24,57): warning C4244: 'argument': conversion from 'float' to 'sf::Uint8', possible loss of data
+C:\Users\USER\Documents\STDISCM\Image_Viewer\FPSCounter.cpp(24,51): warning C4244: 'argument': conversion from 'float' to 'sf::Uint8', possible loss of data
+C:\Users\USER\Documents\STDISCM\Image_Viewer\FPSCounter.cpp(24,45): warning C4244: 'argument': conversion from 'float' to 'sf::Uint8', possible loss of data
+  Gallery.cpp
+C:\Users\USER\Documents\STDISCM\Image_Viewer\Gallery.cpp(15,73): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\USER\Documents\STDISCM\Image_Viewer\Gallery.cpp(15,56): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\USER\Documents\STDISCM\Image_Viewer\Gallery.cpp(46,18): warning C4244: '+=': conversion from 'float' to 'int', possible loss of data
+C:\Users\USER\Documents\STDISCM\Image_Viewer\Gallery.cpp(50,19): warning C4244: '+=': conversion from 'float' to 'int', possible loss of data
+  IconObject.cpp
+  TextureDisplay.cpp
+C:\Users\USER\Documents\STDISCM\Image_Viewer\TextureDisplay.cpp(48,70): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\USER\Documents\STDISCM\Image_Viewer\TextureDisplay.cpp(53,10): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+C:\Users\USER\Documents\STDISCM\Image_Viewer\TextureDisplay.cpp(54,10): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+  main.cpp
+  Generating Code...
   Image_Viewer.vcxproj -> C:\Users\USER\Documents\STDISCM\Image_Viewer\x64\Debug\Image_Viewer.exe

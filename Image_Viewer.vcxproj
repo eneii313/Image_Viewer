@@ -144,6 +144,7 @@
     <ClCompile Include="IconObject.cpp" />
     <ClCompile Include="IETThread.cpp" />
     <ClCompile Include="IExecutionEvent.cpp" />
+    <ClCompile Include="ImageObject.cpp" />
     <ClCompile Include="IWorkerAction.cpp" />
     <ClCompile Include="LoadingIcon.cpp" />
     <ClCompile Include="main.cpp" />
@@ -163,6 +164,7 @@
     <ClInclude Include="IconObject.h" />
     <ClInclude Include="IETThread.h" />
     <ClInclude Include="IExecutionEvent.h" />
+    <ClInclude Include="ImageObject.h" />
     <ClInclude Include="IWorkerAction.h" />
     <ClInclude Include="LoadingIcon.h" />
     <ClInclude Include="PoolWorkerThread.h" />
