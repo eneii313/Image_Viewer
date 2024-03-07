@@ -1,5 +1,4 @@
 #include "BaseRunner.h"
-#include  "GameObjectManager.h"
 #include "TextureManager.h"
 #include "TextureDisplay.h"
 #include "FPSCounter.h"
@@ -36,7 +35,7 @@ BaseRunner::BaseRunner() :
 	this->header.setPosition(padding, padding);
 
 	// initialize gallery view
-	this->gallery = new Gallery(padding, padding*2+36, WINDOW_WIDTH, WINDOW_HEIGHT - (padding*2+36));
+	this->gallery = new GalleryView(padding, padding*2+36, WINDOW_WIDTH, WINDOW_HEIGHT - (padding*2+36));
 
 	this->fpsCounter = new FPSCounter();
 
@@ -48,8 +47,8 @@ void BaseRunner::run() {
 	sf::Time previousTime = clock.getElapsedTime();
 	sf::Time currentTime;
 	
-	this->gallery->addImageTextures();
-	this->maxScrollHeight = this->gallery->computeGalleryHeight();
+	this->gallery->loadImageTextures();
+	//this->maxScrollHeight = this->gallery->computeGalleryHeight();
 
 	while (this->window.isOpen())
 	{
@@ -73,7 +72,6 @@ void BaseRunner::processEvents(sf::Clock clock)
 	if (this->window.pollEvent(event)) {
 		switch (event.type) {
 
-		default: GameObjectManager::getInstance()->processInput(event); break;
 		case sf::Event::Closed:
 			this->window.close();
 			break;

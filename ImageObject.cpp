@@ -1,11 +1,13 @@
 #pragma once
 #include <iostream>
-#include "ImageObject.h"
 #include <thread>
+#include <mutex>
+#include "ImageObject.h"
 
-ImageObject::ImageObject(int posX, int posY, int iconSizeX, int iconSizeY) {
+ImageObject::ImageObject(int textureIndex, int posX, int posY, int iconSizeX, int iconSizeY) {
 	this->textureLoaded = false;
 
+	this->textureIndex = textureIndex;
 	this->iconSizeX = iconSizeX;
 	this->iconSizeY = iconSizeY;
 

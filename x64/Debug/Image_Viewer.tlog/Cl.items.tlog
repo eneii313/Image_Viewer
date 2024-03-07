@@ -1,12 +1,14 @@
-C:\Users\JVC\Downloads\GDPARCM_HO2 - Class Template\GDPARCM_HO2 - Class Template\MathUtils.cpp;C:\Users\JVC\Documents\Y4-T2\STDISCM\STDISCM_Workbench\Image_Viewer\x64\Debug\MathUtils.obj
 C:\Users\JVC\Documents\Y4-T2\STDISCM\STDISCM_Workbench\Image_Viewer\AGameObject.cpp;C:\Users\JVC\Documents\Y4-T2\STDISCM\STDISCM_Workbench\Image_Viewer\x64\Debug\AGameObject.obj
 C:\Users\JVC\Documents\Y4-T2\STDISCM\STDISCM_Workbench\Image_Viewer\AssetLoader.cpp;C:\Users\JVC\Documents\Y4-T2\STDISCM\STDISCM_Workbench\Image_Viewer\x64\Debug\AssetLoader.obj
 C:\Users\JVC\Documents\Y4-T2\STDISCM\STDISCM_Workbench\Image_Viewer\BaseRunner.cpp;C:\Users\JVC\Documents\Y4-T2\STDISCM\STDISCM_Workbench\Image_Viewer\x64\Debug\BaseRunner.obj
 C:\Users\JVC\Documents\Y4-T2\STDISCM\STDISCM_Workbench\Image_Viewer\FPSCounter.cpp;C:\Users\JVC\Documents\Y4-T2\STDISCM\STDISCM_Workbench\Image_Viewer\x64\Debug\FPSCounter.obj
+C:\Users\JVC\Documents\Y4-T2\STDISCM\STDISCM_Workbench\Image_Viewer\GalleryView.cpp;C:\Users\JVC\Documents\Y4-T2\STDISCM\STDISCM_Workbench\Image_Viewer\x64\Debug\GalleryView.obj
 C:\Users\JVC\Documents\Y4-T2\STDISCM\STDISCM_Workbench\Image_Viewer\GameObjectManager.cpp;C:\Users\JVC\Documents\Y4-T2\STDISCM\STDISCM_Workbench\Image_Viewer\x64\Debug\GameObjectManager.obj
 C:\Users\JVC\Documents\Y4-T2\STDISCM\STDISCM_Workbench\Image_Viewer\IconObject.cpp;C:\Users\JVC\Documents\Y4-T2\STDISCM\STDISCM_Workbench\Image_Viewer\x64\Debug\IconObject.obj
 C:\Users\JVC\Documents\Y4-T2\STDISCM\STDISCM_Workbench\Image_Viewer\IETThread.cpp;C:\Users\JVC\Documents\Y4-T2\STDISCM\STDISCM_Workbench\Image_Viewer\x64\Debug\IETThread.obj
 C:\Users\JVC\Documents\Y4-T2\STDISCM\STDISCM_Workbench\Image_Viewer\IExecutionEvent.cpp;C:\Users\JVC\Documents\Y4-T2\STDISCM\STDISCM_Workbench\Image_Viewer\x64\Debug\IExecutionEvent.obj
+C:\Users\JVC\Documents\Y4-T2\STDISCM\STDISCM_Workbench\Image_Viewer\ImageManager.cpp;C:\Users\JVC\Documents\Y4-T2\STDISCM\STDISCM_Workbench\Image_Viewer\x64\Debug\ImageManager.obj
+C:\Users\JVC\Documents\Y4-T2\STDISCM\STDISCM_Workbench\Image_Viewer\ImageObject.cpp;C:\Users\JVC\Documents\Y4-T2\STDISCM\STDISCM_Workbench\Image_Viewer\x64\Debug\ImageObject.obj
 C:\Users\JVC\Documents\Y4-T2\STDISCM\STDISCM_Workbench\Image_Viewer\IWorkerAction.cpp;C:\Users\JVC\Documents\Y4-T2\STDISCM\STDISCM_Workbench\Image_Viewer\x64\Debug\IWorkerAction.obj
 C:\Users\JVC\Documents\Y4-T2\STDISCM\STDISCM_Workbench\Image_Viewer\LoadingIcon.cpp;C:\Users\JVC\Documents\Y4-T2\STDISCM\STDISCM_Workbench\Image_Viewer\x64\Debug\LoadingIcon.obj
 C:\Users\JVC\Documents\Y4-T2\STDISCM\STDISCM_Workbench\Image_Viewer\main.cpp;C:\Users\JVC\Documents\Y4-T2\STDISCM\STDISCM_Workbench\Image_Viewer\x64\Debug\main.obj

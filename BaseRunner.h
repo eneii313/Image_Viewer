@@ -4,7 +4,7 @@
 #include <string>
 #include <iomanip>
 #include <sstream>
-#include "Gallery.h"
+#include "GalleryView.h"
 #include "FPSCounter.h"
 
 using namespace std;
@@ -27,7 +27,7 @@ private:
 
 	sf::RenderWindow window;
 	sf::Text header;
-	Gallery* gallery;
+	GalleryView* gallery;
 	FPSCounter* fpsCounter;
 
 	float padding = 25.0f;

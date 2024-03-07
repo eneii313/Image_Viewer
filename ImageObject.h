@@ -4,7 +4,7 @@
 
 class ImageObject {
 public:
-	ImageObject(int posX, int posY, int iconSizeX, int iconSizeY);
+	ImageObject(int textureIndex, int posX, int posY, int iconSizeX, int iconSizeY);
 	void setTexture(std::string texturePath);
 	void setPosition(int posX, int posY);
 	bool isMouseOver(const sf::Vector2f& mousePosition);
@@ -14,9 +14,9 @@ public:
 	sf::Sprite sprite;
 
 private:
+	int textureIndex;
 	int iconSizeX;
 	int iconSizeY;
-
 
 	sf::RectangleShape border;
 	bool textureLoaded;
