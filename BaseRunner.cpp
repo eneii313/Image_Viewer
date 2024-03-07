@@ -1,7 +1,5 @@
 #include "BaseRunner.h"
-#include  "GameObjectManager.h"
-#include "TextureManager.h"
-#include "TextureDisplay.h"
+#include "ImageManager.h"
 #include "FPSCounter.h"
 
 #include "GalleryManager.h"
@@ -40,6 +38,7 @@ BaseRunner::BaseRunner() :
 	this->header.setFillColor(sf::Color::White);
 	this->header.setPosition(padding, padding);
 
+<<<<<<< Updated upstream
 	// testing loading icon
 	this->loadingIcon = new LoadingIcon(250, 250);
 
@@ -47,6 +46,10 @@ BaseRunner::BaseRunner() :
 
 	//load initial gallery
 	this->gallery = new Gallery(padding, padding*2+36, WINDOW_WIDTH, WINDOW_HEIGHT - (padding*2+36));
+=======
+	// initialize gallery view
+	this->gallery = new GalleryView(padding, padding*2+36, WINDOW_WIDTH, WINDOW_HEIGHT - (padding*2+36));
+>>>>>>> Stashed changes
 
 	/*
 	namespace fs = std::filesystem;
@@ -78,6 +81,11 @@ void BaseRunner::run() {
 	sf::Time previousTime = clock.getElapsedTime();
 	sf::Time currentTime;
 	
+<<<<<<< Updated upstream
+=======
+	this->gallery->loadImageTextures();
+	//this->maxScrollHeight = this->gallery->computeGalleryHeight();
+>>>>>>> Stashed changes
 
 	while (this->window.isOpen())
 	{
@@ -99,6 +107,7 @@ void BaseRunner::processEvents()
 	sf::Event event;
 	if (this->window.pollEvent(event)) {
 		switch (event.type) {
+<<<<<<< Updated upstream
 
 		default: GameObjectManager::getInstance()->processInput(event); break;
 		case sf::Event::Closed:
@@ -115,6 +124,43 @@ void BaseRunner::processEvents()
 				view.setCenter(this->initCenter);
 			}
 			window.setView(view);
+=======
+			case sf::Event::Closed:
+				this->window.close();
+				break;
+		
+			case sf::Event::MouseButtonPressed:
+				if (event.mouseButton.button == sf::Mouse::Left) {
+					sf::Time currentTime = clock.getElapsedTime();
+					if (currentTime - lastClickTime < sf::seconds(0.5)) {
+						sf::Vector2i screenCoords(event.mouseButton.x, event.mouseButton.y);
+						sf::Vector2f worldCoords = window.mapPixelToCoords(screenCoords, view);
+						// Check if mouse position is over any image object
+						this->gallery->handleDoubleClick(worldCoords);
+						this->viewingImage = true;
+					}
+
+					lastClickTime = currentTime;
+				}
+				break;
+
+			case sf::Event::MouseWheelScrolled:
+				view.move(0, -event.mouseWheelScroll.delta * 100);
+
+				// make sure the view doesn't scroll past the top of the object
+				if (view.getCenter().y - view.getSize().y / 2.f < 0) {
+					view.setCenter(this->initCenter);
+				}
+
+				sf::Vector2f topLeftOfWindow = view.getCenter() - view.getSize() / 2.f;
+				sf::Vector2f bottomRightOfWindow = topLeftOfWindow + view.getSize();
+				this->fpsCounter->updateFPSPosition(bottomRightOfWindow.y);
+
+				window.setView(view);
+
+				this->fpsCounter->draw(window);
+				break;
+>>>>>>> Stashed changes
 		}
 	}
 }

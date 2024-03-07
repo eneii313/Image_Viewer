@@ -1,4 +1,5 @@
 #pragma once
+#include <functional>
 #include "IETThread.h"
 #include "IWorkerAction.h"
 
@@ -16,6 +17,6 @@ private:
 	void onStartTask() override;
 	String path;
 	IExecutionEvent* event;
-
+	// std::function<void(const sf::Texture&)> callback;
 
 };

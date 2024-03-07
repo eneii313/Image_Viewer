@@ -63,10 +63,13 @@
     <ClCompile Include="LoadingIcon.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Gallery.cpp">
+    <ClCompile Include="GalleryView.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="GalleryManager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ImageManager.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -116,10 +119,13 @@
     <ClInclude Include="LoadingIcon.h">
       <Filter>Source Files</Filter>
     </ClInclude>
-    <ClInclude Include="Gallery.h">
+    <ClInclude Include="GalleryView.h">
       <Filter>Source Files</Filter>
     </ClInclude>
     <ClInclude Include="GalleryManager.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ImageManager.h">
       <Filter>Source Files</Filter>
     </ClInclude>
   </ItemGroup>

@@ -15,11 +15,22 @@ c:\users\jvc\documents\y4-t2\stdiscm\stdiscm_workbench\image_viewer\x64\debug\ga
 c:\users\jvc\documents\y4-t2\stdiscm\stdiscm_workbench\image_viewer\x64\debug\fpscounter.obj
 c:\users\jvc\documents\y4-t2\stdiscm\stdiscm_workbench\image_viewer\x64\debug\assetloader.obj
 c:\users\jvc\documents\y4-t2\stdiscm\stdiscm_workbench\image_viewer\x64\debug\agameobject.obj
+<<<<<<< Updated upstream
 c:\users\jvc\documents\y4-t2\stdiscm\stdiscm_workbench\image_viewer\x64\debug\mathutils.obj
 c:\users\jvc\documents\y4-t2\stdiscm\stdiscm_workbench\image_viewer\x64\debug\baserunner.obj
 c:\users\jvc\documents\y4-t2\stdiscm\stdiscm_workbench\image_viewer\x64\debug\image_viewer.exe
+=======
+c:\users\jvc\documents\y4-t2\stdiscm\stdiscm_workbench\image_viewer\x64\debug\baserunner.obj
+c:\users\jvc\documents\y4-t2\stdiscm\stdiscm_workbench\image_viewer\x64\debug\imageobject.obj
+c:\users\jvc\documents\y4-t2\stdiscm\stdiscm_workbench\image_viewer\x64\debug\gallery.obj
+>>>>>>> Stashed changes
 c:\users\jvc\documents\y4-t2\stdiscm\stdiscm_workbench\image_viewer\x64\debug\image_viewer.ilk
+c:\users\jvc\documents\y4-t2\stdiscm\stdiscm_workbench\image_viewer\x64\debug\image_viewer.exe
 c:\users\jvc\documents\y4-t2\stdiscm\stdiscm_workbench\image_viewer\x64\debug\image_viewer.pdb
+<<<<<<< Updated upstream
+=======
+c:\users\jvc\documents\y4-t2\stdiscm\stdiscm_workbench\image_viewer\x64\debug\mathutils.obj
+>>>>>>> Stashed changes
 c:\users\jvc\documents\y4-t2\stdiscm\stdiscm_workbench\image_viewer\x64\debug\image_viewer.tlog\cl.command.1.tlog
 c:\users\jvc\documents\y4-t2\stdiscm\stdiscm_workbench\image_viewer\x64\debug\image_viewer.tlog\cl.items.tlog
 c:\users\jvc\documents\y4-t2\stdiscm\stdiscm_workbench\image_viewer\x64\debug\image_viewer.tlog\cl.read.1.tlog
