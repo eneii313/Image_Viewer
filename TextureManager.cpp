@@ -113,7 +113,7 @@ int TextureManager::getNumFrames(const String assetName)
 	}
 }
 
-sf::Texture* TextureManager::getStreamTextureFromList(const int index)
+sf::Texture* TextureManager::getImageTextureFromList(const int index)
 {
 	return this->streamTextureList[index];
 }

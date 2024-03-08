@@ -4,8 +4,9 @@
 
 class ImageObject {
 public:
-	ImageObject(int textureIndex, int posX, int posY, int iconSizeX, int iconSizeY);
-	void setTexture(std::string texturePath);
+	ImageObject(std::string assetName, int posX, int posY, int iconSizeX, int iconSizeY);
+	//void setTexture(std::string texturePath);
+	void setTexture();
 	void setPosition(int posX, int posY);
 	bool isMouseOver(const sf::Vector2f& mousePosition);
 	void handleDoubleClick();
@@ -13,8 +14,10 @@ public:
 	void draw(sf::RenderWindow& window);
 	sf::Sprite sprite;
 
+	bool isTextureLoaded() const;
+
 private:
-	int textureIndex;
+	std::string assetName;
 	int iconSizeX;
 	int iconSizeY;
 

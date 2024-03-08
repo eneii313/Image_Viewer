@@ -3,11 +3,12 @@
 #include <thread>
 #include <mutex>
 #include "ImageObject.h"
+#include "ImageManager.h"
 
-ImageObject::ImageObject(int textureIndex, int posX, int posY, int iconSizeX, int iconSizeY) {
+ImageObject::ImageObject(std::string assetName, int posX, int posY, int iconSizeX, int iconSizeY) {
 	this->textureLoaded = false;
 
-	this->textureIndex = textureIndex;
+	this->assetName = assetName;
 	this->iconSizeX = iconSizeX;
 	this->iconSizeY = iconSizeY;
 
@@ -23,22 +24,23 @@ ImageObject::ImageObject(int textureIndex, int posX, int posY, int iconSizeX, in
 	border.setOutlineColor(sf::Color(70, 70, 77));
 }
 
-// TODO: move loading texture into gallery
-void ImageObject::setTexture(std::string texturePath) {
-	sf::Texture* texture = new sf::Texture();
-	if (!texture->loadFromFile(texturePath))
-		std::cerr << texturePath + " not found." << std::endl;
+void ImageObject::setTexture() {
 
-	this->sprite.setTexture(*texture);
+	sf::Texture* texture = ImageManager::getInstance()->getImageTexture(this->assetName);
+	if (!this->textureLoaded && texture) {
+		this->sprite.setTexture(*texture);
 
-	float scaleX = static_cast<float>(this->iconSizeX) / texture->getSize().x;
-	float scaleY = static_cast<float>(this->iconSizeY) / texture->getSize().y;
+		float scaleX = static_cast<float>(this->iconSizeX) / texture->getSize().x;
+		float scaleY = static_cast<float>(this->iconSizeY) / texture->getSize().y;
 
-	// resize image texture
-	this->sprite.setScale(scaleX, scaleY);
+		// resize image texture
+		this->sprite.setScale(scaleX, scaleY);
 
-	this->textureLoaded = true;
-	//std::cout << texturePath + " loaded." << std::endl;
+		textureLoaded = true;
+		std::cout << "[ImageObject] " << this->assetName + " loaded." << std::endl;
+	}
+
+	
 }
 
 void ImageObject::setPosition(int posX, int posY) {
@@ -50,6 +52,10 @@ void ImageObject::setPosition(int posX, int posY) {
 	this->loadingIcon->setPosition(centerX, centerY);
 
 
+}
+
+bool ImageObject::isTextureLoaded() const {
+	return textureLoaded;
 }
 
 void ImageObject::update(sf::Time deltaTime) {

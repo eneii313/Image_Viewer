@@ -13,7 +13,8 @@ GalleryView::GalleryView(int posX, int posY, int windowWidth, int windowHeight) 
 
 	int imageCount = ImageManager::getInstance()->getImageCount();
 	for (int i = 0; i < imageCount; ++i) {
-		ImageObject* imageObject = new ImageObject(i, 0, 0, this->iconSizeX, this->iconSizeY);
+		std::string assetName = ImageManager::getInstance()->getImageNameAt(i);
+		ImageObject* imageObject = new ImageObject(assetName, 0, 0, this->iconSizeX, this->iconSizeY);
 		this->images.push_back(imageObject);
 	}
 	updateImagePositions();
@@ -53,13 +54,6 @@ void GalleryView::draw(sf::RenderWindow& window) {
 
 
 
-/*
-void GalleryView::addImageTextures() {
-	std::thread loadingThread(&GalleryView::loadAllImageTextures, this);
-	loadingThread.detach();
-}
-*/
-
 // Load textures for all images
 void GalleryView::loadImageTextures() {
 	ImageManager::getInstance()->loadTextures(this);
@@ -91,22 +85,12 @@ void GalleryView::handleDoubleClick(sf::Vector2f mousePosition) {
 }
 
 void GalleryView::onFinishedExecution() {
-	/*
-		for (size_t i = 0; i < this->images.size(); ++i) {
-
-		// std::this_thread::sleep_for(std::chrono::milliseconds(1000)); // try sleep
-
-		std::string texturePath = this->texturePath.at(i);
-
-
-
-		this->images[i]->setTexture(texturePath);
-
-
-
+	for (size_t i = 0; i < this->images.size(); ++i) {
+		if (!this->images[i]->isTextureLoaded()) {
+			this->images[i]->setTexture();
+		}
 		// std::cout << "Image " << i <<" Texture path" << texturePath << std::endl;
 
 	}
-	*/
 	//this->loadImage();
 }

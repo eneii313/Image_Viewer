@@ -20,7 +20,7 @@ public:
 	sf::Texture* getFromTextureMap(const String assetName, int frameIndex);
 	int getNumFrames(const String assetName);
 
-	sf::Texture* getStreamTextureFromList(const int index);
+	sf::Texture* getImageTextureFromList(const int index);
 	int getNumLoadedStreamTextures() const;
 	int allAssetsLoaded() const;
 

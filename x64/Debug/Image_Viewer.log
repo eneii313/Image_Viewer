@@ -1,9 +1,3 @@
-﻿  AssetLoader.cpp
-  GalleryView.cpp
-C:\Users\JVC\Documents\Y4-T2\STDISCM\STDISCM_Workbench\Image_Viewer\GalleryView.cpp(16,76): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-C:\Users\JVC\Documents\Y4-T2\STDISCM\STDISCM_Workbench\Image_Viewer\GalleryView.cpp(16,59): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-C:\Users\JVC\Documents\Y4-T2\STDISCM\STDISCM_Workbench\Image_Viewer\GalleryView.cpp(32,18): warning C4244: '+=': conversion from 'float' to 'int', possible loss of data
-C:\Users\JVC\Documents\Y4-T2\STDISCM\STDISCM_Workbench\Image_Viewer\GalleryView.cpp(36,19): warning C4244: '+=': conversion from 'float' to 'int', possible loss of data
-  ImageManager.cpp
-  Generating Code...
+﻿  ImageManager.cpp
+sfml-graphics-s-d.lib(Image.obj) : warning LNK4099: PDB '' was not found with 'sfml-graphics-s-d.lib(Image.obj)' or at ''; linking object as if no debug info
   Image_Viewer.vcxproj -> C:\Users\JVC\Documents\Y4-T2\STDISCM\STDISCM_Workbench\Image_Viewer\x64\Debug\Image_Viewer.exe

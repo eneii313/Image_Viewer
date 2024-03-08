@@ -9,14 +9,17 @@
 class ImageManager {
 public:
 	typedef std::string String;
-	typedef std::vector<sf::Texture*> TextureList;
+	typedef std::vector<String> List;
+	typedef std::unordered_map<String, sf::Texture*> HashTable;
 
 public:
 	static ImageManager* getInstance();
 	void loadTextures(IExecutionEvent* event);
-	void createTexture(String path);
-	sf::Texture* getStreamTextureAt(const int index);
+	void createTexture(String path, String fileName);
+	sf::Texture* getImageTexture(const String fileName);
+	String getImageNameAt(const int index);
 	int getImageCount();
+	
 
 private:
 	ImageManager();
@@ -25,7 +28,8 @@ private:
 	int allImagesCount = 0;
 
 	static ImageManager* sharedInstance;
-	TextureList textureList;
+	List textureList;
+	HashTable textureMap;
 
 	ThreadPool* threadPool;
 	std::mutex mutex;
