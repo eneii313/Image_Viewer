@@ -66,13 +66,13 @@ sf::Texture* ImageManager::getImageTexture(const String fileName) {
 		}
 		else {
 			// Handle case where texture is not loaded successfully
-			std::cerr << "[ImageManager] Texture for file " << fileName << " is null." << std::endl;
+			//std::cerr << "[ImageManager] Texture for file " << fileName << " is null." << std::endl;
 			return nullptr;
 		}
 	}
 	else {
 		// Handle case where file name is not found in textureMap
-		std::cerr << "[ImageManager] Texture for file " << fileName << " not found." << std::endl;
+		//std::cerr << "[ImageManager] Texture for file " << fileName << " not found." << std::endl;
 		return nullptr;
 	}
 }

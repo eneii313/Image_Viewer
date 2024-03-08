@@ -19,7 +19,7 @@ public:
 	void handleDoubleClick(sf::Vector2f mousePosition);
 	float computeGalleryHeight();
 
-	void onFinishedExecution() override;
+	void onFinishedExecution(std::string) override;
 
 private:
 	void updateImagePositions();

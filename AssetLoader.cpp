@@ -7,7 +7,6 @@
 AssetLoader::AssetLoader(String path, IExecutionEvent* event) {
 	this->path = path;
 	this->event = event;
-	// this->callback = callback;
 }
 
 AssetLoader::~AssetLoader() {
@@ -17,7 +16,7 @@ AssetLoader::~AssetLoader() {
 
 void AssetLoader::onStartTask() {
 	//simulate loading of very large file
-	IETThread::sleep(500);
+	//IETThread::sleep(500);
 
 	std::vector<String> tokens = StringUtils::split(path, '/');
 	String assetName = tokens.back();
@@ -26,7 +25,7 @@ void AssetLoader::onStartTask() {
 	ImageManager::getInstance()->createTexture(path, assetName);
 	// std::cout << "[AssetLoader] Loaded image texture: " << assetName << std::endl;
 
-	this->event->onFinishedExecution();
+	this->event->onFinishedExecution(assetName);
 
 	//delete after being done
 	delete this;

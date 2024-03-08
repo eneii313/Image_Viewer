@@ -36,7 +36,7 @@ void ImageObject::setTexture() {
 		// resize image texture
 		this->sprite.setScale(scaleX, scaleY);
 
-		textureLoaded = true;
+		this->textureLoaded = true;
 		std::cout << "[ImageObject] " << this->assetName + " loaded." << std::endl;
 	}
 
@@ -55,7 +55,12 @@ void ImageObject::setPosition(int posX, int posY) {
 }
 
 bool ImageObject::isTextureLoaded() const {
-	return textureLoaded;
+	return this->textureLoaded;
+}
+
+
+std::string ImageObject::getAssetName() const {
+	return this->assetName;
 }
 
 void ImageObject::update(sf::Time deltaTime) {

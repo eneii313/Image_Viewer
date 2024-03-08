@@ -34,7 +34,7 @@ void TextureDisplay::update(sf::Time deltaTime)
 		}
 		else if (this->streamingType == StreamingType::SINGLE_STREAM && this->ticks > this->STREAMING_LOAD_DELAY) {
 			this->ticks = 0.0f;
-			TextureManager::getInstance()->loadSingleStreamAsset(TextureManager::getInstance()->getNumLoadedStreamTextures(), this);
+			// TextureManager::getInstance()->loadSingleStreamAsset(TextureManager::getInstance()->getNumLoadedStreamTextures(), this);
 			// this->spawnObject();
 		}
 	}
@@ -65,6 +65,8 @@ void TextureDisplay::spawnObject()
 	GameObjectManager::getInstance()->addObject(iconObj);
 }
 
+/*
 void TextureDisplay::onFinishedExecution() {
 	this->spawnObject(); //executes spawn once the texture is ready.
 }
+*/

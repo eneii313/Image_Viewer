@@ -9,7 +9,7 @@ class IconObject;
 /// <summary>
 /// Class that deals with displaying of streamed textures
 /// </summary>
-class TextureDisplay : public AGameObject, public IExecutionEvent
+class TextureDisplay : public AGameObject //, public IExecutionEvent
 {
 public:
 	TextureDisplay();
@@ -17,7 +17,7 @@ public:
 	void processInput(sf::Event event);
 	void update(sf::Time deltaTime);
 
-	void onFinishedExecution() override;
+	// void onFinishedExecution() override;
 
 private:
 	typedef std::vector<IconObject*> IconList;

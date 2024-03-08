@@ -10,11 +10,14 @@ public:
 	void setPosition(int posX, int posY);
 	bool isMouseOver(const sf::Vector2f& mousePosition);
 	void handleDoubleClick();
+
+	std::string getAssetName() const;
+	bool isTextureLoaded() const;
+
 	void update(sf::Time deltaTime);
 	void draw(sf::RenderWindow& window);
-	sf::Sprite sprite;
 
-	bool isTextureLoaded() const;
+	sf::Sprite sprite;
 
 private:
 	std::string assetName;

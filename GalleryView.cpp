@@ -84,13 +84,20 @@ void GalleryView::handleDoubleClick(sf::Vector2f mousePosition) {
 	}
 }
 
-void GalleryView::onFinishedExecution() {
+void GalleryView::onFinishedExecution(std::string assetName) {
 	for (size_t i = 0; i < this->images.size(); ++i) {
+		
+		if (!this->images[i]->isTextureLoaded() && assetName == this->images[i]->getAssetName()) {
+			this->images[i]->setTexture();
+			std::cout << "[GalleryView] Image loaded: " << assetName << std::endl;
+			break;
+		}
+		
+		/*
 		if (!this->images[i]->isTextureLoaded()) {
 			this->images[i]->setTexture();
+			std::cout << "[GalleryView] Image loaded: " << i << std::endl;
 		}
-		// std::cout << "Image " << i <<" Texture path" << texturePath << std::endl;
-
+		*/
 	}
-	//this->loadImage();
 }
