@@ -1,2 +1,12 @@
-﻿  AssetLoader.cpp
+﻿  FullScreenView.cpp
+C:\Users\JVC\Documents\Y4-T2\STDISCM\STDISCM_Workbench\Image_Viewer\FullScreenView.cpp(20,33): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+C:\Users\JVC\Documents\Y4-T2\STDISCM\STDISCM_Workbench\Image_Viewer\FullScreenView.cpp(25,8): warning C4244: 'initializing': conversion from 'const float' to 'int', possible loss of data
+C:\Users\JVC\Documents\Y4-T2\STDISCM\STDISCM_Workbench\Image_Viewer\FullScreenView.cpp(26,8): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
+C:\Users\JVC\Documents\Y4-T2\STDISCM\STDISCM_Workbench\Image_Viewer\FullScreenView.cpp(31,18): warning C4244: '+=': conversion from 'float' to 'int', possible loss of data
+C:\Users\JVC\Documents\Y4-T2\STDISCM\STDISCM_Workbench\Image_Viewer\FullScreenView.cpp(47,71): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+C:\Users\JVC\Documents\Y4-T2\STDISCM\STDISCM_Workbench\Image_Viewer\FullScreenView.cpp(46,85): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\JVC\Documents\Y4-T2\STDISCM\STDISCM_Workbench\Image_Viewer\FullScreenView.cpp(48,56): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\JVC\Documents\Y4-T2\STDISCM\STDISCM_Workbench\Image_Viewer\FullScreenView.cpp(48,31): warning C4244: 'argument': conversion from 'const float' to 'int', possible loss of data
+C:\Users\JVC\Documents\Y4-T2\STDISCM\STDISCM_Workbench\Image_Viewer\FullScreenView.cpp(61,84): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\JVC\Documents\Y4-T2\STDISCM\STDISCM_Workbench\Image_Viewer\FullScreenView.cpp(61,67): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
   Image_Viewer.vcxproj -> C:\Users\JVC\Documents\Y4-T2\STDISCM\STDISCM_Workbench\Image_Viewer\x64\Debug\Image_Viewer.exe

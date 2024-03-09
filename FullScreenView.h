@@ -31,6 +31,7 @@ private:
 
 
 	const int ICON_COUNT = 8;
+	int startIndex = 0;
 	float iconSizeX;
 	float iconSizeY;
 	const float iconPadding = 20.0f;

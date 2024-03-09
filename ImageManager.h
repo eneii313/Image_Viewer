@@ -19,6 +19,7 @@ public:
 	sf::Texture* getImageTexture(const String fileName);
 	String getImageNameAt(const int index);
 	int getImageCount();
+	int getImageNameIndex(String fileName);
 	bool isImageLoaded(String fileName);
 
 private:

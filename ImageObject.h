@@ -8,6 +8,7 @@ public:
 	void setAssetName(std::string assetName);
 	void setTexture();
 	void setPosition(int posX, int posY);
+	void setSizeByTexture();
 	bool isMouseOver(const sf::Vector2f& mousePosition);
 	void handleDoubleClick();
 

@@ -59,6 +59,22 @@ void ImageObject::setPosition(int posX, int posY) {
 
 }
 
+// TODO: fix this, unused
+void ImageObject::setSizeByTexture() {
+	float textureWidth = this->sprite.getTexture()->getSize().x;
+	float textureHeight = this->sprite.getTexture()->getSize().y;
+	float scaleFactor = 1;
+
+	if (textureWidth > this->iconSizeX || textureHeight > this->iconSizeY) {
+		float scaleX = this->iconSizeX / textureWidth;
+		float scaleY = this->iconSizeY / textureHeight;
+
+		float scaleFactor = std::min(scaleX, scaleY);
+
+	}
+	this->sprite.setScale(scaleFactor, scaleFactor);
+}
+
 bool ImageObject::isTextureLoaded() const {
 	return this->textureLoaded;
 }

@@ -26,22 +26,38 @@ void FullScreenView::updateImagePositions() {
 	int y = BaseRunner::WINDOW_HEIGHT * 0.8;
 
 	for (int i = 0; i < this->ICON_COUNT; ++i) {
+		std::cout << "[FullScreenView] Updating images pos at row index " << i << std::endl;
 		this->images[i]->setPosition(x, y);
-
 		x += iconSizeX + iconPadding;
-
 	}
 
 }
 
 // Load textures for all images
 void FullScreenView::loadImageTextures(std::string clickedImageName) {
+	// Delete previous instances
+	delete this->mainImage;
+	for (auto& image : images) {
+		delete image;
+	}
+	images.clear();
+
+
 	this->mainImage = new ImageObject(clickedImageName, 0, 0, BaseRunner::WINDOW_WIDTH - (iconPadding * 2),
 																(BaseRunner::WINDOW_HEIGHT * 0.8) - (iconPadding * 2) - 75);
 	this->mainImage->setPosition(iconPadding, iconPadding + 75);
 
-	for (int i = 0; i < this->ICON_COUNT; ++i) {
+
+	// set starting index for loading the bottom images
+	this->startIndex = ImageManager::getInstance()->getImageNameIndex(clickedImageName);
+	int maxIndex = ImageManager::getInstance()->getImageCount() - this->ICON_COUNT;
+	if (startIndex > maxIndex)
+		startIndex = maxIndex;
+
+
+	for (int i = this->startIndex; i < (this->startIndex+this->ICON_COUNT); ++i) {
 		std::string assetName = ImageManager::getInstance()->getImageNameAt(i);
+		std::cout << "[FullScreenView] Loading images at index " << i << std::endl;
 		ImageObject* imageObject = new ImageObject(assetName, 0, 0, this->iconSizeX, this->iconSizeY);
 		this->images.push_back(imageObject);
 	}
@@ -66,6 +82,7 @@ void FullScreenView::draw(sf::RenderWindow& window) {
 void FullScreenView::onFinishedExecution(std::string assetName) {
 	if (!this->mainImage->isTextureLoaded() && assetName == this->mainImage->getAssetName()) {
 		this->mainImage->setTexture();
+		// this->mainImage->setSizeByTexture();
 		std::cout << "[FullScreenView] Image loaded: " << assetName << std::endl;
 	}
 	else {

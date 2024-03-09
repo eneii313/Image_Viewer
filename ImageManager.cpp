@@ -90,6 +90,16 @@ std::string ImageManager::getImageNameAt(const int index) {
 	}
 }
 
+int ImageManager::getImageNameIndex(String fileName) {
+	for (size_t i = 0; i < this->textureList.size(); ++i) {
+		if (this->textureList[i] == fileName) {
+			return i;
+		}
+	}
+	return -1;
+}
+
 bool ImageManager::isImageLoaded(String fileName) {
 	return this->textureMap.find(fileName) != textureMap.end();
 }
+
