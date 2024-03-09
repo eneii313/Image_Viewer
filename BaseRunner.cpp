@@ -35,7 +35,8 @@ BaseRunner::BaseRunner() :
 	this->header.setPosition(padding, padding);
 
 	// initialize gallery view
-	this->gallery = new GalleryView(padding, padding*2+36, WINDOW_WIDTH, WINDOW_HEIGHT - (padding*2+36));
+	// GalleryView::getInstance();
+	// this->gallery = new GalleryView(padding, padding*2+36, WINDOW_WIDTH, WINDOW_HEIGHT - (padding*2+36));
 
 	this->fpsCounter = new FPSCounter();
 
@@ -47,7 +48,7 @@ void BaseRunner::run() {
 	sf::Time previousTime = clock.getElapsedTime();
 	sf::Time currentTime;
 	
-	this->gallery->loadImageTextures();
+	GalleryView::getInstance()->loadImageTextures();
 	//this->maxScrollHeight = this->gallery->computeGalleryHeight();
 
 	while (this->window.isOpen())
@@ -65,10 +66,10 @@ void BaseRunner::run() {
 
 }
 
-void BaseRunner::processEvents(sf::Clock clock)
-{
+void BaseRunner::processEvents(sf::Clock clock) {
 	sf::View view = window.getView();
 	sf::Event event;
+
 	if (this->window.pollEvent(event)) {
 		switch (event.type) {
 
@@ -83,7 +84,11 @@ void BaseRunner::processEvents(sf::Clock clock)
 					sf::Vector2i screenCoords(event.mouseButton.x, event.mouseButton.y);
 					sf::Vector2f worldCoords = window.mapPixelToCoords(screenCoords, view);
 					// Check if mouse position is over any image object
-					this->gallery->handleDoubleClick(worldCoords);
+					// GalleryView::getInstance()->handleDoubleClick(worldCoords);
+					this->isViewingImage = !this->isViewingImage;
+
+					view.setCenter(this->initCenter);
+					window.setView(view);
 				}
 
 				lastClickTime = currentTime;
@@ -91,35 +96,50 @@ void BaseRunner::processEvents(sf::Clock clock)
 			break;
 
 		case sf::Event::MouseWheelScrolled:
-			view.move(0, -event.mouseWheelScroll.delta * 100);
+			if (!this->isViewingImage) {
+				view.move(0, -event.mouseWheelScroll.delta * 100);
 
-			// make sure the view doesn't scroll past the top of the object
-			if (view.getCenter().y - view.getSize().y / 2.f < 0) {
-				view.setCenter(this->initCenter);
+				// make sure the view doesn't scroll past the top of the object
+				if (view.getCenter().y - view.getSize().y / 2.f < 0) {
+					view.setCenter(this->initCenter);
+				}
+
+				window.setView(view);
 			}
 
-			sf::Vector2f topLeftOfWindow = view.getCenter() - view.getSize() / 2.f;
-			sf::Vector2f bottomRightOfWindow = topLeftOfWindow + view.getSize();
-			this->fpsCounter->updateFPSPosition(bottomRightOfWindow.y);
-
-			window.setView(view);
-
-			this->fpsCounter->draw(window);
 			break;
 		}
 	}
+
+	// set position of fps counter
+	sf::Vector2f topLeftOfWindow = view.getCenter() - view.getSize() / 2.f;
+	sf::Vector2f bottomRightOfWindow = topLeftOfWindow + view.getSize();
+	this->fpsCounter->updateFPSPosition(bottomRightOfWindow.y);
+	this->fpsCounter->draw(window);
 }
 
 void BaseRunner::update(sf::Time elapsedTime) {
-	this->gallery->update(elapsedTime);
+	if (this->isViewingImage) {
+		FullScreenView::getInstance()->update(elapsedTime);
+	}
+	else {
+		GalleryView::getInstance()->update(elapsedTime);
+	}
+	
 	this->fpsCounter->update(elapsedTime);
 }
 
 void BaseRunner::render() {
 	this->window.clear(sf::Color(37,37,40));
 
-	this->window.draw(header);
-	this->gallery->draw(window);
+	if (this->isViewingImage) {
+		FullScreenView::getInstance()->draw(window);
+	}
+	else {
+		this->window.draw(header);
+		GalleryView::getInstance()->draw(window);
+	}
+
 	this->fpsCounter->draw(window);
 
 

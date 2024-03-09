@@ -72,6 +72,9 @@
     <ClCompile Include="ImageManager.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="FullScreenView.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="AssetLoader.h">
@@ -126,6 +129,9 @@
       <Filter>Source Files</Filter>
     </ClInclude>
     <ClInclude Include="ImageManager.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="FullScreenView.h">
       <Filter>Source Files</Filter>
     </ClInclude>
   </ItemGroup>

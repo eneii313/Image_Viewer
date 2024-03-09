@@ -139,6 +139,7 @@
     <ClCompile Include="AssetLoader.cpp" />
     <ClCompile Include="BaseRunner.cpp" />
     <ClCompile Include="FPSCounter.cpp" />
+    <ClCompile Include="FullScreenView.cpp" />
     <ClCompile Include="GalleryView.cpp" />
     <ClCompile Include="GameObjectManager.cpp" />
     <ClCompile Include="IconObject.cpp" />
@@ -160,6 +161,7 @@
     <ClInclude Include="AssetLoader.h" />
     <ClInclude Include="BaseRunner.h" />
     <ClInclude Include="FPSCounter.h" />
+    <ClInclude Include="FullScreenView.h" />
     <ClInclude Include="GalleryView.h" />
     <ClInclude Include="GameObjectManager.h" />
     <ClInclude Include="IconObject.h" />

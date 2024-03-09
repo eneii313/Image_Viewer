@@ -58,6 +58,7 @@ void ImageManager::createTexture(String texturePath, String fileName) {
 
 sf::Texture* ImageManager::getImageTexture(const String fileName) {
 	// return this->textureMap[fileName];
+
 	auto it = this->textureMap.find(fileName);
 	if (it != this->textureMap.end()) {
 		// Check if the retrieved pointer is not null
@@ -66,13 +67,13 @@ sf::Texture* ImageManager::getImageTexture(const String fileName) {
 		}
 		else {
 			// Handle case where texture is not loaded successfully
-			//std::cerr << "[ImageManager] Texture for file " << fileName << " is null." << std::endl;
+			std::cerr << "[ImageManager] Texture for file " << fileName << " is null." << std::endl;
 			return nullptr;
 		}
 	}
 	else {
 		// Handle case where file name is not found in textureMap
-		//std::cerr << "[ImageManager] Texture for file " << fileName << " not found." << std::endl;
+		std::cerr << "[ImageManager] Texture for file " << fileName << " not found." << std::endl;
 		return nullptr;
 	}
 }
@@ -84,5 +85,8 @@ int ImageManager::getImageCount() {
 std::string ImageManager::getImageNameAt(const int index) {
 	if (index >= 0 && index < this->textureList.size())
 		return this->textureList[index];
-	else return nullptr;
+	else {
+		std::cout << "[ImageManager] Image name at " << index << " DNE" << std::endl;
+		return nullptr;
+	}
 }

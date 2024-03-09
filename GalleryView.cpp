@@ -5,6 +5,14 @@
 #include "BaseRunner.h"
 #include "StringUtils.h"
 
+GalleryView* GalleryView::sharedInstance = NULL;
+
+GalleryView* GalleryView::getInstance() {
+	if (sharedInstance == NULL)
+		sharedInstance = new GalleryView(25, 86, BaseRunner::WINDOW_WIDTH, BaseRunner::WINDOW_HEIGHT);
+	return sharedInstance;
+}
+
 GalleryView::GalleryView(int posX, int posY, int windowWidth, int windowHeight) {
 	this->posX = posX;
 	this->posY = posY;
@@ -21,7 +29,6 @@ GalleryView::GalleryView(int posX, int posY, int windowWidth, int windowHeight) 
 }
 
 
-// TODO: make this spawnObject
 void GalleryView::updateImagePositions() {
 
 	int x = this->posX;
@@ -73,14 +80,12 @@ float GalleryView::computeGalleryHeight() {
 
 
 void GalleryView::handleDoubleClick(sf::Vector2f mousePosition) {
-	int i = 0;
 	for (auto& imageObject : this->images) {
 		if (imageObject->isMouseOver(mousePosition)) {
 			// Handle double-click event for the image object
-			// std::cout << "Double-click on image object detected! Image " << this->texturePath.at(i) << std::endl;
+			std::cout << "Double-click on image object detected! Image " << imageObject->getAssetName() << std::endl;
 			break;
 		}
-		i++;
 	}
 }
 
@@ -89,7 +94,7 @@ void GalleryView::onFinishedExecution(std::string assetName) {
 		
 		if (!this->images[i]->isTextureLoaded() && assetName == this->images[i]->getAssetName()) {
 			this->images[i]->setTexture();
-			std::cout << "[GalleryView] Image loaded: " << assetName << std::endl;
+			//std::cout << "[GalleryView] Image loaded: " << assetName << std::endl;
 			break;
 		}
 		

@@ -11,6 +11,7 @@ public:
 	// <int index, std::string texturePath>
 	typedef std::unordered_map<int, std::string> HashTable;
 
+	static GalleryView* getInstance();
 	GalleryView(int posX, int posY, int windowWidth, int windowHeight);
 	void loadImageTextures();
 	void update(sf::Time deltaTime);
@@ -22,6 +23,8 @@ public:
 	void onFinishedExecution(std::string) override;
 
 private:
+	static GalleryView* sharedInstance;
+
 	void updateImagePositions();
 
 	std::vector<ImageObject*> images;

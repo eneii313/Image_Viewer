@@ -1,119 +1,34 @@
-﻿  AGameObject.cpp
-  AssetLoader.cpp
-  BaseRunner.cpp
-C:\Users\JVC\Documents\Y4-T2\STDISCM\STDISCM_Workbench\Image_Viewer\BaseRunner.cpp(38,85): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-C:\Users\JVC\Documents\Y4-T2\STDISCM\STDISCM_Workbench\Image_Viewer\BaseRunner.cpp(38,52): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-C:\Users\JVC\Documents\Y4-T2\STDISCM\STDISCM_Workbench\Image_Viewer\BaseRunner.cpp(38,34): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-C:\Users\JVC\Documents\Y4-T2\STDISCM\STDISCM_Workbench\Image_Viewer\BaseRunner.cpp(103,59): warning C4244: 'argument': conversion from 'T' to 'int', possible loss of data
-C:\Users\JVC\Documents\Y4-T2\STDISCM\STDISCM_Workbench\Image_Viewer\BaseRunner.cpp(103,59): warning C4244:         with
-C:\Users\JVC\Documents\Y4-T2\STDISCM\STDISCM_Workbench\Image_Viewer\BaseRunner.cpp(103,59): warning C4244:         [
-C:\Users\JVC\Documents\Y4-T2\STDISCM\STDISCM_Workbench\Image_Viewer\BaseRunner.cpp(103,59): warning C4244:             T=float
-C:\Users\JVC\Documents\Y4-T2\STDISCM\STDISCM_Workbench\Image_Viewer\BaseRunner.cpp(103,59): warning C4244:         ]
+﻿  BaseRunner.cpp
+C:\Users\JVC\Documents\Y4-T2\STDISCM\STDISCM_Workbench\Image_Viewer\BaseRunner.cpp(117,57): warning C4244: 'argument': conversion from 'T' to 'int', possible loss of data
+C:\Users\JVC\Documents\Y4-T2\STDISCM\STDISCM_Workbench\Image_Viewer\BaseRunner.cpp(117,57): warning C4244:         with
+C:\Users\JVC\Documents\Y4-T2\STDISCM\STDISCM_Workbench\Image_Viewer\BaseRunner.cpp(117,57): warning C4244:         [
+C:\Users\JVC\Documents\Y4-T2\STDISCM\STDISCM_Workbench\Image_Viewer\BaseRunner.cpp(117,57): warning C4244:             T=float
+C:\Users\JVC\Documents\Y4-T2\STDISCM\STDISCM_Workbench\Image_Viewer\BaseRunner.cpp(117,57): warning C4244:         ]
   FPSCounter.cpp
 C:\Users\JVC\Documents\Y4-T2\STDISCM\STDISCM_Workbench\Image_Viewer\FPSCounter.cpp(12,57): warning C4244: 'argument': conversion from 'float' to 'sf::Uint8', possible loss of data
 C:\Users\JVC\Documents\Y4-T2\STDISCM\STDISCM_Workbench\Image_Viewer\FPSCounter.cpp(12,51): warning C4244: 'argument': conversion from 'float' to 'sf::Uint8', possible loss of data
 C:\Users\JVC\Documents\Y4-T2\STDISCM\STDISCM_Workbench\Image_Viewer\FPSCounter.cpp(12,45): warning C4244: 'argument': conversion from 'float' to 'sf::Uint8', possible loss of data
+  FullScreenView.cpp
+C:\Users\JVC\Documents\Y4-T2\STDISCM\STDISCM_Workbench\Image_Viewer\FullScreenView.cpp(20,33): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+C:\Users\JVC\Documents\Y4-T2\STDISCM\STDISCM_Workbench\Image_Viewer\FullScreenView.cpp(32,122): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+C:\Users\JVC\Documents\Y4-T2\STDISCM\STDISCM_Workbench\Image_Viewer\FullScreenView.cpp(32,64): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\JVC\Documents\Y4-T2\STDISCM\STDISCM_Workbench\Image_Viewer\FullScreenView.cpp(33,56): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\JVC\Documents\Y4-T2\STDISCM\STDISCM_Workbench\Image_Viewer\FullScreenView.cpp(33,31): warning C4244: 'argument': conversion from 'const float' to 'int', possible loss of data
+C:\Users\JVC\Documents\Y4-T2\STDISCM\STDISCM_Workbench\Image_Viewer\FullScreenView.cpp(37,84): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\JVC\Documents\Y4-T2\STDISCM\STDISCM_Workbench\Image_Viewer\FullScreenView.cpp(37,67): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\JVC\Documents\Y4-T2\STDISCM\STDISCM_Workbench\Image_Viewer\FullScreenView.cpp(45,8): warning C4244: 'initializing': conversion from 'const float' to 'int', possible loss of data
+C:\Users\JVC\Documents\Y4-T2\STDISCM\STDISCM_Workbench\Image_Viewer\FullScreenView.cpp(46,8): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
+C:\Users\JVC\Documents\Y4-T2\STDISCM\STDISCM_Workbench\Image_Viewer\FullScreenView.cpp(51,18): warning C4244: '+=': conversion from 'float' to 'int', possible loss of data
   GalleryView.cpp
-C:\Users\JVC\Documents\Y4-T2\STDISCM\STDISCM_Workbench\Image_Viewer\GalleryView.cpp(17,84): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-C:\Users\JVC\Documents\Y4-T2\STDISCM\STDISCM_Workbench\Image_Viewer\GalleryView.cpp(17,67): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-C:\Users\JVC\Documents\Y4-T2\STDISCM\STDISCM_Workbench\Image_Viewer\GalleryView.cpp(33,18): warning C4244: '+=': conversion from 'float' to 'int', possible loss of data
-C:\Users\JVC\Documents\Y4-T2\STDISCM\STDISCM_Workbench\Image_Viewer\GalleryView.cpp(37,19): warning C4244: '+=': conversion from 'float' to 'int', possible loss of data
-  GameObjectManager.cpp
-C:\Users\JVC\Documents\Y4-T2\STDISCM\STDISCM_Workbench\Image_Viewer\GameObjectManager.cpp(34,34): warning C4267: 'return': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\JVC\Documents\Y4-T2\STDISCM\STDISCM_Workbench\Image_Viewer\GalleryView.cpp(25,84): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\JVC\Documents\Y4-T2\STDISCM\STDISCM_Workbench\Image_Viewer\GalleryView.cpp(25,67): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\JVC\Documents\Y4-T2\STDISCM\STDISCM_Workbench\Image_Viewer\GalleryView.cpp(40,18): warning C4244: '+=': conversion from 'float' to 'int', possible loss of data
+C:\Users\JVC\Documents\Y4-T2\STDISCM\STDISCM_Workbench\Image_Viewer\GalleryView.cpp(44,19): warning C4244: '+=': conversion from 'float' to 'int', possible loss of data
   IconObject.cpp
-  IETThread.cpp
-  IExecutionEvent.cpp
-C:\Users\JVC\Documents\Y4-T2\STDISCM\STDISCM_Workbench\Image_Viewer\IExecutionEvent.cpp(1,10): warning C4067: unexpected tokens following preprocessor directive - expected a newline
-  ImageManager.cpp
-  ImageObject.cpp
-C:\Users\JVC\Documents\Y4-T2\STDISCM\STDISCM_Workbench\Image_Viewer\ImageObject.cpp(15,33): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-C:\Users\JVC\Documents\Y4-T2\STDISCM\STDISCM_Workbench\Image_Viewer\ImageObject.cpp(15,27): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-C:\Users\JVC\Documents\Y4-T2\STDISCM\STDISCM_Workbench\Image_Viewer\ImageObject.cpp(21,41): warning C4244: 'argument': conversion from 'int' to 'T', possible loss of data
-C:\Users\JVC\Documents\Y4-T2\STDISCM\STDISCM_Workbench\Image_Viewer\ImageObject.cpp(21,41): warning C4244:         with
-C:\Users\JVC\Documents\Y4-T2\STDISCM\STDISCM_Workbench\Image_Viewer\ImageObject.cpp(21,41): warning C4244:         [
-C:\Users\JVC\Documents\Y4-T2\STDISCM\STDISCM_Workbench\Image_Viewer\ImageObject.cpp(21,41): warning C4244:             T=float
-C:\Users\JVC\Documents\Y4-T2\STDISCM\STDISCM_Workbench\Image_Viewer\ImageObject.cpp(21,41): warning C4244:         ]
-C:\Users\JVC\Documents\Y4-T2\STDISCM\STDISCM_Workbench\Image_Viewer\ImageObject.cpp(21,30): warning C4244: 'argument': conversion from 'int' to 'T', possible loss of data
-C:\Users\JVC\Documents\Y4-T2\STDISCM\STDISCM_Workbench\Image_Viewer\ImageObject.cpp(21,30): warning C4244:         with
-C:\Users\JVC\Documents\Y4-T2\STDISCM\STDISCM_Workbench\Image_Viewer\ImageObject.cpp(21,30): warning C4244:         [
-C:\Users\JVC\Documents\Y4-T2\STDISCM\STDISCM_Workbench\Image_Viewer\ImageObject.cpp(21,30): warning C4244:             T=float
-C:\Users\JVC\Documents\Y4-T2\STDISCM\STDISCM_Workbench\Image_Viewer\ImageObject.cpp(21,30): warning C4244:         ]
-C:\Users\JVC\Documents\Y4-T2\STDISCM\STDISCM_Workbench\Image_Viewer\ImageObject.cpp(47,33): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-C:\Users\JVC\Documents\Y4-T2\STDISCM\STDISCM_Workbench\Image_Viewer\ImageObject.cpp(47,27): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-C:\Users\JVC\Documents\Y4-T2\STDISCM\STDISCM_Workbench\Image_Viewer\ImageObject.cpp(48,33): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-C:\Users\JVC\Documents\Y4-T2\STDISCM\STDISCM_Workbench\Image_Viewer\ImageObject.cpp(48,27): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-  IWorkerAction.cpp
-  LoadingIcon.cpp
-C:\Users\JVC\Documents\Y4-T2\STDISCM\STDISCM_Workbench\Image_Viewer\LoadingIcon.cpp(13,33): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-C:\Users\JVC\Documents\Y4-T2\STDISCM\STDISCM_Workbench\Image_Viewer\LoadingIcon.cpp(13,27): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-C:\Users\JVC\Documents\Y4-T2\STDISCM\STDISCM_Workbench\Image_Viewer\LoadingIcon.cpp(18,33): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-C:\Users\JVC\Documents\Y4-T2\STDISCM\STDISCM_Workbench\Image_Viewer\LoadingIcon.cpp(18,27): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-  main.cpp
-  PoolWorkerThread.cpp
-  StringUtils.cpp
   TextureDisplay.cpp
 C:\Users\JVC\Documents\Y4-T2\STDISCM\STDISCM_Workbench\Image_Viewer\TextureDisplay.cpp(48,70): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
 C:\Users\JVC\Documents\Y4-T2\STDISCM\STDISCM_Workbench\Image_Viewer\TextureDisplay.cpp(53,10): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
 C:\Users\JVC\Documents\Y4-T2\STDISCM\STDISCM_Workbench\Image_Viewer\TextureDisplay.cpp(54,10): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
-  TextureManager.cpp
-C:\Users\JVC\Documents\Y4-T2\STDISCM\STDISCM_Workbench\Image_Viewer\TextureManager.cpp(108,42): warning C4267: 'return': conversion from 'size_t' to 'int', possible loss of data
-C:\Users\JVC\Documents\Y4-T2\STDISCM\STDISCM_Workbench\Image_Viewer\TextureManager.cpp(123,37): warning C4267: 'return': conversion from 'size_t' to 'int', possible loss of data
-  ThreadPool.cpp
+  main.cpp
   Generating Code...
-sfml-graphics-s-d.lib(Transformable.obj) : warning LNK4099: PDB '' was not found with 'sfml-graphics-s-d.lib(Transformable.obj)' or at ''; linking object as if no debug info
-sfml-graphics-s-d.lib(Texture.obj) : warning LNK4099: PDB '' was not found with 'sfml-graphics-s-d.lib(Texture.obj)' or at ''; linking object as if no debug info
-sfml-graphics-s-d.lib(RenderTarget.obj) : warning LNK4099: PDB '' was not found with 'sfml-graphics-s-d.lib(RenderTarget.obj)' or at ''; linking object as if no debug info
-sfml-graphics-s-d.lib(Sprite.obj) : warning LNK4099: PDB '' was not found with 'sfml-graphics-s-d.lib(Sprite.obj)' or at ''; linking object as if no debug info
-sfml-graphics-s-d.lib(RenderStates.obj) : warning LNK4099: PDB '' was not found with 'sfml-graphics-s-d.lib(RenderStates.obj)' or at ''; linking object as if no debug info
-sfml-graphics-s-d.lib(Color.obj) : warning LNK4099: PDB '' was not found with 'sfml-graphics-s-d.lib(Color.obj)' or at ''; linking object as if no debug info
-sfml-graphics-s-d.lib(Font.obj) : warning LNK4099: PDB '' was not found with 'sfml-graphics-s-d.lib(Font.obj)' or at ''; linking object as if no debug info
-sfml-graphics-s-d.lib(View.obj) : warning LNK4099: PDB '' was not found with 'sfml-graphics-s-d.lib(View.obj)' or at ''; linking object as if no debug info
-sfml-graphics-s-d.lib(RenderWindow.obj) : warning LNK4099: PDB '' was not found with 'sfml-graphics-s-d.lib(RenderWindow.obj)' or at ''; linking object as if no debug info
-sfml-graphics-s-d.lib(Text.obj) : warning LNK4099: PDB '' was not found with 'sfml-graphics-s-d.lib(Text.obj)' or at ''; linking object as if no debug info
-sfml-graphics-s-d.lib(Shape.obj) : warning LNK4099: PDB '' was not found with 'sfml-graphics-s-d.lib(Shape.obj)' or at ''; linking object as if no debug info
-sfml-graphics-s-d.lib(RectangleShape.obj) : warning LNK4099: PDB '' was not found with 'sfml-graphics-s-d.lib(RectangleShape.obj)' or at ''; linking object as if no debug info
-sfml-graphics-s-d.lib(Transform.obj) : warning LNK4099: PDB '' was not found with 'sfml-graphics-s-d.lib(Transform.obj)' or at ''; linking object as if no debug info
-sfml-graphics-s-d.lib(Image.obj) : warning LNK4099: PDB '' was not found with 'sfml-graphics-s-d.lib(Image.obj)' or at ''; linking object as if no debug info
-sfml-graphics-s-d.lib(GLExtensions.obj) : warning LNK4099: PDB '' was not found with 'sfml-graphics-s-d.lib(GLExtensions.obj)' or at ''; linking object as if no debug info
-sfml-graphics-s-d.lib(GLCheck.obj) : warning LNK4099: PDB '' was not found with 'sfml-graphics-s-d.lib(GLCheck.obj)' or at ''; linking object as if no debug info
-sfml-graphics-s-d.lib(TextureSaver.obj) : warning LNK4099: PDB '' was not found with 'sfml-graphics-s-d.lib(TextureSaver.obj)' or at ''; linking object as if no debug info
-sfml-graphics-s-d.lib(BlendMode.obj) : warning LNK4099: PDB '' was not found with 'sfml-graphics-s-d.lib(BlendMode.obj)' or at ''; linking object as if no debug info
-sfml-graphics-s-d.lib(Vertex.obj) : warning LNK4099: PDB '' was not found with 'sfml-graphics-s-d.lib(Vertex.obj)' or at ''; linking object as if no debug info
-sfml-graphics-s-d.lib(Shader.obj) : warning LNK4099: PDB '' was not found with 'sfml-graphics-s-d.lib(Shader.obj)' or at ''; linking object as if no debug info
-sfml-graphics-s-d.lib(VertexBuffer.obj) : warning LNK4099: PDB '' was not found with 'sfml-graphics-s-d.lib(VertexBuffer.obj)' or at ''; linking object as if no debug info
-sfml-graphics-s-d.lib(RenderTextureImplFBO.obj) : warning LNK4099: PDB '' was not found with 'sfml-graphics-s-d.lib(RenderTextureImplFBO.obj)' or at ''; linking object as if no debug info
-sfml-graphics-s-d.lib(VertexArray.obj) : warning LNK4099: PDB '' was not found with 'sfml-graphics-s-d.lib(VertexArray.obj)' or at ''; linking object as if no debug info
-sfml-graphics-s-d.lib(ImageLoader.obj) : warning LNK4099: PDB '' was not found with 'sfml-graphics-s-d.lib(ImageLoader.obj)' or at ''; linking object as if no debug info
-sfml-graphics-s-d.lib(Glsl.obj) : warning LNK4099: PDB '' was not found with 'sfml-graphics-s-d.lib(Glsl.obj)' or at ''; linking object as if no debug info
-sfml-graphics-s-d.lib(RenderTextureImpl.obj) : warning LNK4099: PDB '' was not found with 'sfml-graphics-s-d.lib(RenderTextureImpl.obj)' or at ''; linking object as if no debug info
-sfml-window-s-d.lib(VideoMode.obj) : warning LNK4099: PDB '' was not found with 'sfml-window-s-d.lib(VideoMode.obj)' or at ''; linking object as if no debug info
-sfml-window-s-d.lib(WindowBase.obj) : warning LNK4099: PDB '' was not found with 'sfml-window-s-d.lib(WindowBase.obj)' or at ''; linking object as if no debug info
-sfml-window-s-d.lib(Window.obj) : warning LNK4099: PDB '' was not found with 'sfml-window-s-d.lib(Window.obj)' or at ''; linking object as if no debug info
-sfml-window-s-d.lib(GlResource.obj) : warning LNK4099: PDB '' was not found with 'sfml-window-s-d.lib(GlResource.obj)' or at ''; linking object as if no debug info
-sfml-window-s-d.lib(Context.obj) : warning LNK4099: PDB '' was not found with 'sfml-window-s-d.lib(Context.obj)' or at ''; linking object as if no debug info
-sfml-window-s-d.lib(VideoModeImpl.obj) : warning LNK4099: PDB '' was not found with 'sfml-window-s-d.lib(VideoModeImpl.obj)' or at ''; linking object as if no debug info
-sfml-window-s-d.lib(Cursor.obj) : warning LNK4099: PDB '' was not found with 'sfml-window-s-d.lib(Cursor.obj)' or at ''; linking object as if no debug info
-sfml-window-s-d.lib(WindowImpl.obj) : warning LNK4099: PDB '' was not found with 'sfml-window-s-d.lib(WindowImpl.obj)' or at ''; linking object as if no debug info
-sfml-window-s-d.lib(GlContext.obj) : warning LNK4099: PDB '' was not found with 'sfml-window-s-d.lib(GlContext.obj)' or at ''; linking object as if no debug info
-sfml-window-s-d.lib(CursorImpl.obj) : warning LNK4099: PDB '' was not found with 'sfml-window-s-d.lib(CursorImpl.obj)' or at ''; linking object as if no debug info
-sfml-window-s-d.lib(JoystickManager.obj) : warning LNK4099: PDB '' was not found with 'sfml-window-s-d.lib(JoystickManager.obj)' or at ''; linking object as if no debug info
-sfml-window-s-d.lib(SensorManager.obj) : warning LNK4099: PDB '' was not found with 'sfml-window-s-d.lib(SensorManager.obj)' or at ''; linking object as if no debug info
-sfml-window-s-d.lib(WindowImplWin32.obj) : warning LNK4099: PDB '' was not found with 'sfml-window-s-d.lib(WindowImplWin32.obj)' or at ''; linking object as if no debug info
-sfml-window-s-d.lib(VulkanImplWin32.obj) : warning LNK4099: PDB '' was not found with 'sfml-window-s-d.lib(VulkanImplWin32.obj)' or at ''; linking object as if no debug info
-sfml-window-s-d.lib(WglContext.obj) : warning LNK4099: PDB '' was not found with 'sfml-window-s-d.lib(WglContext.obj)' or at ''; linking object as if no debug info
-sfml-window-s-d.lib(Joystick.obj) : warning LNK4099: PDB '' was not found with 'sfml-window-s-d.lib(Joystick.obj)' or at ''; linking object as if no debug info
-sfml-window-s-d.lib(JoystickImpl.obj) : warning LNK4099: PDB '' was not found with 'sfml-window-s-d.lib(JoystickImpl.obj)' or at ''; linking object as if no debug info
-sfml-window-s-d.lib(SensorImpl.obj) : warning LNK4099: PDB '' was not found with 'sfml-window-s-d.lib(SensorImpl.obj)' or at ''; linking object as if no debug info
-sfml-system-s-d.lib(Time.obj) : warning LNK4099: PDB '' was not found with 'sfml-system-s-d.lib(Time.obj)' or at ''; linking object as if no debug info
-sfml-system-s-d.lib(Clock.obj) : warning LNK4099: PDB '' was not found with 'sfml-system-s-d.lib(Clock.obj)' or at ''; linking object as if no debug info
-sfml-system-s-d.lib(String.obj) : warning LNK4099: PDB '' was not found with 'sfml-system-s-d.lib(String.obj)' or at ''; linking object as if no debug info
-sfml-system-s-d.lib(Mutex.obj) : warning LNK4099: PDB '' was not found with 'sfml-system-s-d.lib(Mutex.obj)' or at ''; linking object as if no debug info
-sfml-system-s-d.lib(Lock.obj) : warning LNK4099: PDB '' was not found with 'sfml-system-s-d.lib(Lock.obj)' or at ''; linking object as if no debug info
-sfml-system-s-d.lib(Err.obj) : warning LNK4099: PDB '' was not found with 'sfml-system-s-d.lib(Err.obj)' or at ''; linking object as if no debug info
-sfml-system-s-d.lib(Sleep.obj) : warning LNK4099: PDB '' was not found with 'sfml-system-s-d.lib(Sleep.obj)' or at ''; linking object as if no debug info
-sfml-system-s-d.lib(ThreadLocal.obj) : warning LNK4099: PDB '' was not found with 'sfml-system-s-d.lib(ThreadLocal.obj)' or at ''; linking object as if no debug info
-sfml-system-s-d.lib(ClockImpl.obj) : warning LNK4099: PDB '' was not found with 'sfml-system-s-d.lib(ClockImpl.obj)' or at ''; linking object as if no debug info
-sfml-system-s-d.lib(MutexImpl.obj) : warning LNK4099: PDB '' was not found with 'sfml-system-s-d.lib(MutexImpl.obj)' or at ''; linking object as if no debug info
-sfml-system-s-d.lib(SleepImpl.obj) : warning LNK4099: PDB '' was not found with 'sfml-system-s-d.lib(SleepImpl.obj)' or at ''; linking object as if no debug info
-sfml-system-s-d.lib(ThreadLocalImpl.obj) : warning LNK4099: PDB '' was not found with 'sfml-system-s-d.lib(ThreadLocalImpl.obj)' or at ''; linking object as if no debug info
   Image_Viewer.vcxproj -> C:\Users\JVC\Documents\Y4-T2\STDISCM\STDISCM_Workbench\Image_Viewer\x64\Debug\Image_Viewer.exe

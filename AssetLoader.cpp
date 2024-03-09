@@ -16,7 +16,7 @@ AssetLoader::~AssetLoader() {
 
 void AssetLoader::onStartTask() {
 	//simulate loading of very large file
-	//IETThread::sleep(500);
+	IETThread::sleep(250);
 
 	std::vector<String> tokens = StringUtils::split(path, '/');
 	String assetName = tokens.back();

@@ -15,7 +15,7 @@ ImageObject::ImageObject(std::string assetName, int posX, int posY, int iconSize
 	this->sprite.setPosition(posX, posY);
 
 	// setup loading icon
-	this->loadingIcon = new LoadingIcon(posX, posY, 0.5);
+	this->loadingIcon = new LoadingIcon(posX, posY, iconSizeY, 0.5);
 
 	// setup border for when there is no image loaded
 	border.setSize(sf::Vector2f(iconSizeX, iconSizeY));
@@ -27,7 +27,7 @@ ImageObject::ImageObject(std::string assetName, int posX, int posY, int iconSize
 void ImageObject::setTexture() {
 
 	sf::Texture* texture = ImageManager::getInstance()->getImageTexture(this->assetName);
-	if (!this->textureLoaded && texture) {
+	if (!this->textureLoaded && texture != nullptr) {
 		this->sprite.setTexture(*texture);
 
 		float scaleX = static_cast<float>(this->iconSizeX) / texture->getSize().x;
@@ -87,10 +87,3 @@ bool ImageObject::isMouseOver(const sf::Vector2f& mousePosition) {
 void ImageObject::handleDoubleClick() {
 	// std::cout << "Double-click on image object detected! Index " << std::endl;
 }
-
-/*
-// Implementation of getGlobalBounds function
-sf::FloatRect ImageObject::getGlobalBounds() const {
-	return sf::FloatRect(this->sprite.getPosition().x, this->sprite.getPosition().y, this->iconSizeX, this->iconSizeY);
-}
-*/

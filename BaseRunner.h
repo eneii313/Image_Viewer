@@ -5,6 +5,7 @@
 #include <iomanip>
 #include <sstream>
 #include "GalleryView.h"
+#include "FullScreenView.h"
 #include "FPSCounter.h"
 
 using namespace std;
@@ -24,11 +25,11 @@ public:
 	void run();
 
 private:
-
 	sf::RenderWindow window;
 	sf::Text header;
-	GalleryView* gallery;
 	FPSCounter* fpsCounter;
+
+	bool isViewingImage = false;
 
 	float padding = 25.0f;
 	float fps = 0.0f;
