@@ -1,2 +1,10 @@
 *.ipch
 *.vsidx
+*.suo
+*.user
+*sln.docstates
+*.sdf
+*.opensdf
+*.vcxproj.user
+*.vcxproj.*
+/.vs/

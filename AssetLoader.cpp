@@ -1,6 +1,6 @@
 #include "AssetLoader.h"
 #include <iostream>
-#include "TextureManager.h"
+#include "ImageManager.h"
 #include "StringUtils.h"
 #include "IExecutionEvent.h"
 
@@ -13,21 +13,24 @@ AssetLoader::~AssetLoader() {
 	// std::cout << "Destroying stream asset loader." << std::endl;
 }
 
+
 void AssetLoader::onStartTask() {
-	// std::cout << "Running stream asset loader " << std::endl;
 	//simulate loading of very large file
-	IETThread::sleep(1500);
+	//IETThread::sleep(250);
 
 	std::vector<String> tokens = StringUtils::split(path, '/');
-	String assetName = StringUtils::split(tokens[tokens.size() - 1], '.')[0];
+	String assetName = tokens.back();
 
-	TextureManager::getInstance()->instantiateAsTexture(path, assetName, true);
+	if (ImageManager::getInstance()->isImageLoaded(assetName)) {
+		//std::cerr << "[AssetLoader] " << assetName + " is already loaded." << std::endl;
+	}	
+	else {
+		ImageManager::getInstance()->createTexture(path, assetName);
+		//std::cout << "[AssetLoader] Loaded image texture: " << assetName << std::endl;
+	}
 
-	std::cout << "[AssetLoader] Loaded streaming texture: " << assetName << std::endl;
-
-	this->event->onFinishedExecution();
+	this->event->onFinishedExecution(assetName);
 
 	//delete after being done
 	delete this;
 }
-

@@ -2,9 +2,9 @@
 C:\Users\USER\Documents\STDISCM\Image_Viewer\BaseRunner.cpp(39,81): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
 C:\Users\USER\Documents\STDISCM\Image_Viewer\BaseRunner.cpp(39,48): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
 C:\Users\USER\Documents\STDISCM\Image_Viewer\BaseRunner.cpp(39,30): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-C:\Users\USER\Documents\STDISCM\Image_Viewer\BaseRunner.cpp(100,59): warning C4244: 'argument': conversion from 'T' to 'int', possible loss of data
-C:\Users\USER\Documents\STDISCM\Image_Viewer\BaseRunner.cpp(100,59): warning C4244:         with
-C:\Users\USER\Documents\STDISCM\Image_Viewer\BaseRunner.cpp(100,59): warning C4244:         [
-C:\Users\USER\Documents\STDISCM\Image_Viewer\BaseRunner.cpp(100,59): warning C4244:             T=float
-C:\Users\USER\Documents\STDISCM\Image_Viewer\BaseRunner.cpp(100,59): warning C4244:         ]
+C:\Users\USER\Documents\STDISCM\Image_Viewer\BaseRunner.cpp(105,59): warning C4244: 'argument': conversion from 'T' to 'int', possible loss of data
+C:\Users\USER\Documents\STDISCM\Image_Viewer\BaseRunner.cpp(105,59): warning C4244:         with
+C:\Users\USER\Documents\STDISCM\Image_Viewer\BaseRunner.cpp(105,59): warning C4244:         [
+C:\Users\USER\Documents\STDISCM\Image_Viewer\BaseRunner.cpp(105,59): warning C4244:             T=float
+C:\Users\USER\Documents\STDISCM\Image_Viewer\BaseRunner.cpp(105,59): warning C4244:         ]
   Image_Viewer.vcxproj -> C:\Users\USER\Documents\STDISCM\Image_Viewer\x64\Debug\Image_Viewer.exe

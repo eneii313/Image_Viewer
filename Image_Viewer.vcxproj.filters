@@ -24,25 +24,10 @@
     <ClCompile Include="IExecutionEvent.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="TextureManager.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="TextureDisplay.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="AGameObject.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="BaseRunner.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="FPSCounter.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="GameObjectManager.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="IconObject.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="IETThread.cpp">
@@ -63,10 +48,16 @@
     <ClCompile Include="LoadingIcon.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Gallery.cpp">
+    <ClCompile Include="GalleryView.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="ImageObject.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ImageManager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="FullScreenView.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -80,28 +71,13 @@
     <ClInclude Include="IExecutionEvent.h">
       <Filter>Source Files</Filter>
     </ClInclude>
-    <ClInclude Include="TextureDisplay.h">
-      <Filter>Source Files</Filter>
-    </ClInclude>
-    <ClInclude Include="AGameObject.h">
-      <Filter>Source Files</Filter>
-    </ClInclude>
     <ClInclude Include="FPSCounter.h">
-      <Filter>Source Files</Filter>
-    </ClInclude>
-    <ClInclude Include="GameObjectManager.h">
-      <Filter>Source Files</Filter>
-    </ClInclude>
-    <ClInclude Include="IconObject.h">
       <Filter>Source Files</Filter>
     </ClInclude>
     <ClInclude Include="IETThread.h">
       <Filter>Source Files</Filter>
     </ClInclude>
     <ClInclude Include="StringUtils.h">
-      <Filter>Source Files</Filter>
-    </ClInclude>
-    <ClInclude Include="TextureManager.h">
       <Filter>Source Files</Filter>
     </ClInclude>
     <ClInclude Include="IWorkerAction.h">
@@ -116,10 +92,16 @@
     <ClInclude Include="LoadingIcon.h">
       <Filter>Source Files</Filter>
     </ClInclude>
-    <ClInclude Include="Gallery.h">
+    <ClInclude Include="GalleryView.h">
       <Filter>Source Files</Filter>
     </ClInclude>
     <ClInclude Include="ImageObject.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ImageManager.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="FullScreenView.h">
       <Filter>Source Files</Filter>
     </ClInclude>
   </ItemGroup>

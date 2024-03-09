@@ -4,7 +4,8 @@
 #include <string>
 #include <iomanip>
 #include <sstream>
-#include "Gallery.h"
+#include "GalleryView.h"
+#include "FullScreenView.h"
 #include "FPSCounter.h"
 
 using namespace std;
@@ -24,20 +25,21 @@ public:
 	void run();
 
 private:
-
 	sf::RenderWindow window;
 	sf::Text header;
-	Gallery* gallery;
 	FPSCounter* fpsCounter;
+
+	bool isViewingImage = false;
 
 	float padding = 25.0f;
 	float fps = 0.0f;
 	float maxScrollHeight = WINDOW_HEIGHT;
+	sf::Time lastClickTime = sf::Time::Zero;
 
 	sf::Vector2f initCenter;
 
 	void render();
-	void processEvents();
+	void processEvents(sf::Clock clock);
 	void update(sf::Time elapsedTime);
 };
 
