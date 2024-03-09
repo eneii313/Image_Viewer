@@ -135,14 +135,11 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="AGameObject.cpp" />
     <ClCompile Include="AssetLoader.cpp" />
     <ClCompile Include="BaseRunner.cpp" />
     <ClCompile Include="FPSCounter.cpp" />
     <ClCompile Include="FullScreenView.cpp" />
     <ClCompile Include="GalleryView.cpp" />
-    <ClCompile Include="GameObjectManager.cpp" />
-    <ClCompile Include="IconObject.cpp" />
     <ClCompile Include="IETThread.cpp" />
     <ClCompile Include="IExecutionEvent.cpp" />
     <ClCompile Include="ImageManager.cpp" />
@@ -152,19 +149,14 @@
     <ClCompile Include="main.cpp" />
     <ClCompile Include="PoolWorkerThread.cpp" />
     <ClCompile Include="StringUtils.cpp" />
-    <ClCompile Include="TextureDisplay.cpp" />
-    <ClCompile Include="TextureManager.cpp" />
     <ClCompile Include="ThreadPool.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="AGameObject.h" />
     <ClInclude Include="AssetLoader.h" />
     <ClInclude Include="BaseRunner.h" />
     <ClInclude Include="FPSCounter.h" />
     <ClInclude Include="FullScreenView.h" />
     <ClInclude Include="GalleryView.h" />
-    <ClInclude Include="GameObjectManager.h" />
-    <ClInclude Include="IconObject.h" />
     <ClInclude Include="IETThread.h" />
     <ClInclude Include="IExecutionEvent.h" />
     <ClInclude Include="ImageManager.h" />
@@ -173,8 +165,6 @@
     <ClInclude Include="LoadingIcon.h" />
     <ClInclude Include="PoolWorkerThread.h" />
     <ClInclude Include="StringUtils.h" />
-    <ClInclude Include="TextureDisplay.h" />
-    <ClInclude Include="TextureManager.h" />
     <ClInclude Include="ThreadPool.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

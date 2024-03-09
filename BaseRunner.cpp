@@ -1,6 +1,4 @@
 #include "BaseRunner.h"
-#include "TextureManager.h"
-#include "TextureDisplay.h"
 #include "FPSCounter.h"
 
 const float FRAME_RATE = 60.0f;
