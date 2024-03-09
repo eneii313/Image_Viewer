@@ -5,7 +5,7 @@
 #include "ImageObject.h"
 #include "IExecutionEvent.h"
 
-class FullScreenView /* : public IExecutionEvent */ {
+class FullScreenView : public IExecutionEvent {
 public:
 
 	// <int index, std::string texturePath>
@@ -13,23 +13,21 @@ public:
 
 	static FullScreenView* getInstance();
 	FullScreenView(int windowWidth, int windowHeight);
-	// void loadImageTextures();
+	void loadImageTextures(std::string clickedImageName);
 	void update(sf::Time deltaTime);
 	void draw(sf::RenderWindow& window);
 
 	//void handleClick(sf::Vector2f mousePosition);
 
-	// void onFinishedExecution(std::string) override;
+	void onFinishedExecution(std::string) override;
 
 private:
 	static FullScreenView* sharedInstance;
 
 	void updateImagePositions();
 
-	sf::Text returnBtn;
 	ImageObject* mainImage;
 	std::vector<ImageObject*> images;
-	std::string clickedImageName = "";
 
 
 	const int ICON_COUNT = 8;

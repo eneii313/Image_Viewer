@@ -24,7 +24,6 @@ ImageManager::ImageManager() {
 void ImageManager::loadTextures(IExecutionEvent* event) {\
 	for (const auto& file : std::filesystem::directory_iterator(STREAMING_PATH)) {
 		String path = file.path().generic_string();
-
 		AssetLoader* assetLoader = new AssetLoader(path, event);
 		this->threadPool->scheduleTask(assetLoader);
 	}
@@ -89,4 +88,8 @@ std::string ImageManager::getImageNameAt(const int index) {
 		std::cout << "[ImageManager] Image name at " << index << " DNE" << std::endl;
 		return nullptr;
 	}
+}
+
+bool ImageManager::isImageLoaded(String fileName) {
+	return this->textureMap.find(fileName) != textureMap.end();
 }

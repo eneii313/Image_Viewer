@@ -84,13 +84,14 @@ void GalleryView::handleDoubleClick(sf::Vector2f mousePosition) {
 		if (imageObject->isMouseOver(mousePosition)) {
 			// Handle double-click event for the image object
 			std::cout << "Double-click on image object detected! Image " << imageObject->getAssetName() << std::endl;
+			FullScreenView::getInstance()->loadImageTextures(imageObject->getAssetName());
 			break;
 		}
 	}
 }
 
 void GalleryView::onFinishedExecution(std::string assetName) {
-	for (size_t i = 0; i < this->images.size(); ++i) {
+	for (int i = 0; i < this->images.size(); ++i) {
 		
 		if (!this->images[i]->isTextureLoaded() && assetName == this->images[i]->getAssetName()) {
 			this->images[i]->setTexture();

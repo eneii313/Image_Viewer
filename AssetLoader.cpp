@@ -21,9 +21,12 @@ void AssetLoader::onStartTask() {
 	std::vector<String> tokens = StringUtils::split(path, '/');
 	String assetName = tokens.back();
 
-	// std::cout << "[AssetLoader] Attempting to load: " << path << std::endl;
-	ImageManager::getInstance()->createTexture(path, assetName);
-	// std::cout << "[AssetLoader] Loaded image texture: " << assetName << std::endl;
+	if (ImageManager::getInstance()->isImageLoaded(assetName))
+		std::cerr << "[AssetLoader] " << assetName + " is already loaded." << std::endl;
+	else {
+		ImageManager::getInstance()->createTexture(path, assetName);
+		//std::cout << "[AssetLoader] Loaded image texture: " << assetName << std::endl;
+	}
 
 	this->event->onFinishedExecution(assetName);
 

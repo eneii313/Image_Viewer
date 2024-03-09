@@ -80,17 +80,30 @@ void BaseRunner::processEvents(sf::Clock clock) {
 		case sf::Event::MouseButtonPressed:
 			if (event.mouseButton.button == sf::Mouse::Left) {
 				sf::Time currentTime = clock.getElapsedTime();
-				if (currentTime - lastClickTime < sf::seconds(0.5)) {
+				
+
+				// handles switching to Full Screen
+				if (!this->isViewingImage && currentTime - lastClickTime < sf::seconds(0.5)) {
 					sf::Vector2i screenCoords(event.mouseButton.x, event.mouseButton.y);
 					sf::Vector2f worldCoords = window.mapPixelToCoords(screenCoords, view);
 					// Check if mouse position is over any image object
-					// GalleryView::getInstance()->handleDoubleClick(worldCoords);
-					this->isViewingImage = !this->isViewingImage;
+					GalleryView::getInstance()->handleDoubleClick(worldCoords);
 
 					view.setCenter(this->initCenter);
-					window.setView(view);
+					this->header.setString("< Return");
+					this->isViewingImage = true;
+					
+				}
+				// handles switching to Gallery
+				else if (this->isViewingImage) {
+					sf::FloatRect headerBounds = this->header.getGlobalBounds();
+					if (headerBounds.contains(event.mouseButton.x, event.mouseButton.y)) {
+						this->header.setString("All Photos");
+						this->isViewingImage = false;
+					}
 				}
 
+				window.setView(view);
 				lastClickTime = currentTime;
 			}
 			break;
@@ -131,12 +144,11 @@ void BaseRunner::update(sf::Time elapsedTime) {
 
 void BaseRunner::render() {
 	this->window.clear(sf::Color(37,37,40));
-
+	this->window.draw(header);
 	if (this->isViewingImage) {
 		FullScreenView::getInstance()->draw(window);
 	}
 	else {
-		this->window.draw(header);
 		GalleryView::getInstance()->draw(window);
 	}
 

@@ -24,6 +24,11 @@ ImageObject::ImageObject(std::string assetName, int posX, int posY, int iconSize
 	border.setOutlineColor(sf::Color(70, 70, 77));
 }
 
+
+void ImageObject::setAssetName(std::string assetName) {
+	this->assetName = assetName;
+}
+
 void ImageObject::setTexture() {
 
 	sf::Texture* texture = ImageManager::getInstance()->getImageTexture(this->assetName);
@@ -37,7 +42,7 @@ void ImageObject::setTexture() {
 		this->sprite.setScale(scaleX, scaleY);
 
 		this->textureLoaded = true;
-		std::cout << "[ImageObject] " << this->assetName + " loaded." << std::endl;
+		// std::cout << "[ImageObject] " << this->assetName + " loaded." << std::endl;
 	}
 
 	

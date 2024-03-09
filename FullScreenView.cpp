@@ -18,26 +18,6 @@ FullScreenView* FullScreenView::getInstance() {
 FullScreenView::FullScreenView(int windowWidth, int windowHeight) {
 	this->iconSizeX = (windowWidth - iconPadding * (ICON_COUNT + 1)) / ICON_COUNT;
 	this->iconSizeY = windowHeight * 0.15;
-
-
-	sf::Font* font = new sf::Font();
-	font->loadFromFile("Media/Roboto.ttf");
-
-	this->returnBtn.setString("< Return");
-	this->returnBtn.setFont(*font);
-	this->returnBtn.setCharacterSize(36);
-	this->returnBtn.setFillColor(sf::Color::White);
-	this->returnBtn.setPosition(25, 25);
-
-	this->mainImage = new ImageObject("00.jpg", 0, 0, windowWidth - (iconPadding*2), (windowHeight * 0.8) - (iconPadding*2) - 75);
-	this->mainImage->setPosition(iconPadding, iconPadding + 75);
-	
-	for (int i = 0; i < this->ICON_COUNT; ++i) {
-		std::string assetName = ImageManager::getInstance()->getImageNameAt(i);
-		ImageObject* imageObject = new ImageObject(assetName, 0, 0, this->iconSizeX, this->iconSizeY);
-		this->images.push_back(imageObject);
-	}
-	updateImagePositions();
 }
 
 void FullScreenView::updateImagePositions() {
@@ -54,6 +34,22 @@ void FullScreenView::updateImagePositions() {
 
 }
 
+// Load textures for all images
+void FullScreenView::loadImageTextures(std::string clickedImageName) {
+	this->mainImage = new ImageObject(clickedImageName, 0, 0, BaseRunner::WINDOW_WIDTH - (iconPadding * 2),
+																(BaseRunner::WINDOW_HEIGHT * 0.8) - (iconPadding * 2) - 75);
+	this->mainImage->setPosition(iconPadding, iconPadding + 75);
+
+	for (int i = 0; i < this->ICON_COUNT; ++i) {
+		std::string assetName = ImageManager::getInstance()->getImageNameAt(i);
+		ImageObject* imageObject = new ImageObject(assetName, 0, 0, this->iconSizeX, this->iconSizeY);
+		this->images.push_back(imageObject);
+	}
+	updateImagePositions();
+
+	ImageManager::getInstance()->loadTextures(this);
+}
+
 void FullScreenView::update(sf::Time deltaTime) {
 	this->mainImage->update(deltaTime);
 	for (const auto& image : this->images)
@@ -62,8 +58,24 @@ void FullScreenView::update(sf::Time deltaTime) {
 }
 
 void FullScreenView::draw(sf::RenderWindow& window) {
-	window.draw(this->returnBtn);
 	this->mainImage->draw(window);
 	for (const auto& image : this->images)
 		image->draw(window);
+}
+
+void FullScreenView::onFinishedExecution(std::string assetName) {
+	if (!this->mainImage->isTextureLoaded() && assetName == this->mainImage->getAssetName()) {
+		this->mainImage->setTexture();
+		std::cout << "[FullScreenView] Image loaded: " << assetName << std::endl;
+	}
+	else {
+		for (int i = 0; i < this->images.size(); ++i) {
+
+			if (!this->images[i]->isTextureLoaded() && assetName == this->images[i]->getAssetName()) {
+				this->images[i]->setTexture();
+				std::cout << "[FullScreenView] Image loaded: " << assetName << std::endl;
+				break;
+			}
+		}
+	}
 }

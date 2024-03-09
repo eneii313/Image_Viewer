@@ -5,7 +5,7 @@
 class ImageObject {
 public:
 	ImageObject(std::string assetName, int posX, int posY, int iconSizeX, int iconSizeY);
-	//void setTexture(std::string texturePath);
+	void setAssetName(std::string assetName);
 	void setTexture();
 	void setPosition(int posX, int posY);
 	bool isMouseOver(const sf::Vector2f& mousePosition);
