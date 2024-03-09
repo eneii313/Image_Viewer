@@ -67,15 +67,9 @@ void GalleryView::loadImageTextures() {
 }
 
 
-// TODO: fix this if may time
 float GalleryView::computeGalleryHeight() {
-	float totalImageHeight = 0.f;
-	for (const auto& image : this->images) {
-		totalImageHeight += this->iconSizeY + this->iconPadding;
-	}
-
-	// Calculate the maximum allowable position based on the total image height
-	return totalImageHeight - BaseRunner::WINDOW_HEIGHT + 100;
+	ImageObject* lastImage = this->images.back();
+	return lastImage->getImageEndPos() + this->iconPadding;
 }
 
 

@@ -4,6 +4,7 @@
 #include <mutex>
 #include "ImageObject.h"
 #include "ImageManager.h"
+#include "BaseRunner.h"
 
 ImageObject::ImageObject(std::string assetName, int posX, int posY, int iconSizeX, int iconSizeY) {
 	this->textureLoaded = false;
@@ -32,8 +33,9 @@ void ImageObject::setAssetName(std::string assetName) {
 void ImageObject::setTexture() {
 
 	sf::Texture* texture = ImageManager::getInstance()->getImageTexture(this->assetName);
-	if (!this->textureLoaded && texture != nullptr) {
+	if (texture != nullptr) {
 		this->sprite.setTexture(*texture);
+		this->sprite.setTextureRect(sf::IntRect(0, 0, texture->getSize().x, texture->getSize().y));
 
 		float scaleX = static_cast<float>(this->iconSizeX) / texture->getSize().x;
 		float scaleY = static_cast<float>(this->iconSizeY) / texture->getSize().y;
@@ -42,7 +44,6 @@ void ImageObject::setTexture() {
 		this->sprite.setScale(scaleX, scaleY);
 
 		this->textureLoaded = true;
-		// std::cout << "[ImageObject] " << this->assetName + " loaded." << std::endl;
 	}
 
 	
@@ -59,25 +60,44 @@ void ImageObject::setPosition(int posX, int posY) {
 
 }
 
-// TODO: fix this, unused
 void ImageObject::setSizeByTexture() {
 	float textureWidth = this->sprite.getTexture()->getSize().x;
 	float textureHeight = this->sprite.getTexture()->getSize().y;
-	float scaleFactor = 1;
-
+	
 	if (textureWidth > this->iconSizeX || textureHeight > this->iconSizeY) {
+		std::cout << "[ImageObject] textureSize: " << textureWidth << " " << textureHeight << std::endl;
+		std::cout << "[ImageObject] iconSize: " << iconSizeX << " " << iconSizeY << std::endl;
+		
 		float scaleX = this->iconSizeX / textureWidth;
 		float scaleY = this->iconSizeY / textureHeight;
 
 		float scaleFactor = std::min(scaleX, scaleY);
 
+		this->sprite.setScale(scaleFactor, scaleFactor);
+		
+		std::cout << "[ImageObject] " << this->assetName <<" scaleFactor: " << scaleFactor << std::endl;
+
+		// center the sprite
+		sf::FloatRect scaledBounds = this->sprite.getLocalBounds();
+		float scaledWidth = scaledBounds.width * this->sprite.getScale().x;
+		float scaledHeight = scaledBounds.height * this->sprite.getScale().y;
+
+		float screenWidth = static_cast<float>(BaseRunner::WINDOW_WIDTH);
+
+		this->sprite.setPosition((screenWidth - scaledWidth) / 2.0f, this->sprite.getPosition().y);
+
+		std::cout << "[ImageObject] new textureSize: " << sprite.getGlobalBounds().width << " " << sprite.getGlobalBounds().height << std::endl << std::endl;
 	}
-	this->sprite.setScale(scaleFactor, scaleFactor);
+	
 }
 
 void ImageObject::setBorder() {
 	this->border.setOutlineColor(sf::Color::White);
 	this->showBorder = true;
+}
+
+void ImageObject::removeBorder() {
+	this->showBorder = false;
 }
 
 bool ImageObject::isTextureLoaded() const {
@@ -114,4 +134,8 @@ bool ImageObject::isMouseOver(const sf::Vector2f& mousePosition) {
 
 void ImageObject::handleDoubleClick() {
 	// std::cout << "Double-click on image object detected! Index " << std::endl;
+}
+
+float ImageObject::getImageEndPos() {
+	return this->sprite.getPosition().y;
 }

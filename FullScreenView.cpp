@@ -82,6 +82,7 @@ void FullScreenView::draw(sf::RenderWindow& window) {
 void FullScreenView::onFinishedExecution(std::string assetName) {
 	if (!this->mainImage->isTextureLoaded() && assetName == this->mainImage->getAssetName()) {
 		this->mainImage->setTexture();
+		this->mainImage->setSizeByTexture();
 		//std::cout << "[FullScreenView] Main Image loaded: " << assetName << std::endl;
 	}
 
@@ -89,11 +90,30 @@ void FullScreenView::onFinishedExecution(std::string assetName) {
 		if (!this->images[i]->isTextureLoaded() && assetName == this->images[i]->getAssetName()) {
 			this->images[i]->setTexture();
 
-			//std::cout << "[FullScreenView] Image loaded: " << assetName << std::endl;
 			if (this->images[i]->getAssetName() == this->mainImage->getAssetName())
 				this->images[i]->setBorder();
 			break;
 		}
 	}
 
+
+}
+
+void FullScreenView::handleClick(sf::Vector2f mousePosition) {
+	for (auto& imageObject : this->images) {
+		if (imageObject->isMouseOver(mousePosition)) {
+			// Handle click event for the image object
+			//std::cout << "Click on image object detected! Image " << imageObject->getAssetName() << std::endl;
+			this->mainImage->setAssetName(imageObject->getAssetName());
+			this->mainImage->setTexture();
+			this->mainImage->setSizeByTexture();
+
+			for (auto& imageObject2 : this->images)
+				imageObject2->removeBorder();
+
+			imageObject->setBorder();
+
+			break;
+		}
+	}
 }

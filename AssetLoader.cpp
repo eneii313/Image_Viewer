@@ -16,13 +16,14 @@ AssetLoader::~AssetLoader() {
 
 void AssetLoader::onStartTask() {
 	//simulate loading of very large file
-	IETThread::sleep(500);
+	//IETThread::sleep(250);
 
 	std::vector<String> tokens = StringUtils::split(path, '/');
 	String assetName = tokens.back();
 
-	if (ImageManager::getInstance()->isImageLoaded(assetName))
-		std::cerr << "[AssetLoader] " << assetName + " is already loaded." << std::endl;
+	if (ImageManager::getInstance()->isImageLoaded(assetName)) {
+		//std::cerr << "[AssetLoader] " << assetName + " is already loaded." << std::endl;
+	}	
 	else {
 		ImageManager::getInstance()->createTexture(path, assetName);
 		//std::cout << "[AssetLoader] Loaded image texture: " << assetName << std::endl;

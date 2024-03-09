@@ -45,7 +45,7 @@ void BaseRunner::run() {
 	sf::Time currentTime;
 	
 	GalleryView::getInstance()->loadImageTextures();
-	//this->maxScrollHeight = this->gallery->computeGalleryHeight();
+	this->maxScrollHeight = GalleryView::getInstance()->computeGalleryHeight();
 
 	while (this->window.isOpen())
 	{
@@ -76,12 +76,11 @@ void BaseRunner::processEvents(sf::Clock clock) {
 		case sf::Event::MouseButtonPressed:
 			if (event.mouseButton.button == sf::Mouse::Left) {
 				sf::Time currentTime = clock.getElapsedTime();
-				
+				sf::Vector2i screenCoords(event.mouseButton.x, event.mouseButton.y);
+				sf::Vector2f worldCoords = window.mapPixelToCoords(screenCoords, view);
 
 				// handles switching to Full Screen
 				if (!this->isViewingImage && currentTime - lastClickTime < sf::seconds(0.5)) {
-					sf::Vector2i screenCoords(event.mouseButton.x, event.mouseButton.y);
-					sf::Vector2f worldCoords = window.mapPixelToCoords(screenCoords, view);
 					// Check if mouse position is over any image object
 					std::string clickedImage = GalleryView::getInstance()->handleDoubleClick(worldCoords);
 					if (clickedImage != "") {
@@ -91,8 +90,12 @@ void BaseRunner::processEvents(sf::Clock clock) {
 						this->isViewingImage = true;
 					}
 				}
-				// handles switching to Gallery
+				
 				else if (this->isViewingImage) {
+					// handles clicking another image in Full Screen
+					FullScreenView::getInstance()->handleClick(worldCoords);
+
+					// handles switching to Gallery
 					sf::FloatRect headerBounds = this->header.getGlobalBounds();
 					if (headerBounds.contains(event.mouseButton.x, event.mouseButton.y)) {
 						this->header.setString("All Photos");
@@ -112,6 +115,9 @@ void BaseRunner::processEvents(sf::Clock clock) {
 				// make sure the view doesn't scroll past the top of the object
 				if (view.getCenter().y - view.getSize().y / 2.f < 0) {
 					view.setCenter(this->initCenter);
+				}
+				else if (view.getCenter().y >= maxScrollHeight) {
+					return;
 				}
 
 				window.setView(view);

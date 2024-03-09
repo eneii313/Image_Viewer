@@ -17,7 +17,8 @@ public:
 	void update(sf::Time deltaTime);
 	void draw(sf::RenderWindow& window);
 
-	//void handleClick(sf::Vector2f mousePosition);
+	void handleClick(sf::Vector2f mousePosition);
+	void swapMainImage(std::string clickedImage);
 
 	void onFinishedExecution(std::string) override;
 

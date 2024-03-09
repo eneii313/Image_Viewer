@@ -10,12 +10,14 @@ public:
 	void setPosition(int posX, int posY);
 	void setSizeByTexture();
 	void setBorder();
+	void removeBorder();
 
 	bool isMouseOver(const sf::Vector2f& mousePosition);
 	void handleDoubleClick();
 
 	std::string getAssetName() const;
 	bool isTextureLoaded() const;
+	float getImageEndPos();
 
 	void update(sf::Time deltaTime);
 	void draw(sf::RenderWindow& window);
