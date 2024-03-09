@@ -34,10 +34,6 @@ BaseRunner::BaseRunner() :
 	this->header.setFillColor(sf::Color::White);
 	this->header.setPosition(padding, padding);
 
-	// initialize gallery view
-	// GalleryView::getInstance();
-	// this->gallery = new GalleryView(padding, padding*2+36, WINDOW_WIDTH, WINDOW_HEIGHT - (padding*2+36));
-
 	this->fpsCounter = new FPSCounter();
 
 	this->initCenter = this->window.getView().getCenter();
@@ -87,12 +83,13 @@ void BaseRunner::processEvents(sf::Clock clock) {
 					sf::Vector2i screenCoords(event.mouseButton.x, event.mouseButton.y);
 					sf::Vector2f worldCoords = window.mapPixelToCoords(screenCoords, view);
 					// Check if mouse position is over any image object
-					GalleryView::getInstance()->handleDoubleClick(worldCoords);
-
-					view.setCenter(this->initCenter);
-					this->header.setString("< Return");
-					this->isViewingImage = true;
-					
+					std::string clickedImage = GalleryView::getInstance()->handleDoubleClick(worldCoords);
+					if (clickedImage != "") {
+						FullScreenView::getInstance()->loadImageTextures(clickedImage);
+						view.setCenter(this->initCenter);
+						this->header.setString("< Return");
+						this->isViewingImage = true;
+					}
 				}
 				// handles switching to Gallery
 				else if (this->isViewingImage) {

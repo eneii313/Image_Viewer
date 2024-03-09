@@ -26,7 +26,7 @@ void FullScreenView::updateImagePositions() {
 	int y = BaseRunner::WINDOW_HEIGHT * 0.8;
 
 	for (int i = 0; i < this->ICON_COUNT; ++i) {
-		std::cout << "[FullScreenView] Updating images pos at row index " << i << std::endl;
+		//std::cout << "[FullScreenView] Updating images pos at row index " << i << std::endl;
 		this->images[i]->setPosition(x, y);
 		x += iconSizeX + iconPadding;
 	}
@@ -57,13 +57,13 @@ void FullScreenView::loadImageTextures(std::string clickedImageName) {
 
 	for (int i = this->startIndex; i < (this->startIndex+this->ICON_COUNT); ++i) {
 		std::string assetName = ImageManager::getInstance()->getImageNameAt(i);
-		std::cout << "[FullScreenView] Loading images at index " << i << std::endl;
+		//std::cout << "[FullScreenView] Loading images at index " << i << std::endl;
 		ImageObject* imageObject = new ImageObject(assetName, 0, 0, this->iconSizeX, this->iconSizeY);
 		this->images.push_back(imageObject);
 	}
 	updateImagePositions();
 
-	ImageManager::getInstance()->loadTextures(this);
+	ImageManager::getInstance()->loadTextures(this, this->startIndex, this->startIndex+ICON_COUNT);
 }
 
 void FullScreenView::update(sf::Time deltaTime) {
@@ -82,17 +82,18 @@ void FullScreenView::draw(sf::RenderWindow& window) {
 void FullScreenView::onFinishedExecution(std::string assetName) {
 	if (!this->mainImage->isTextureLoaded() && assetName == this->mainImage->getAssetName()) {
 		this->mainImage->setTexture();
-		// this->mainImage->setSizeByTexture();
-		std::cout << "[FullScreenView] Image loaded: " << assetName << std::endl;
+		//std::cout << "[FullScreenView] Main Image loaded: " << assetName << std::endl;
 	}
-	else {
-		for (int i = 0; i < this->images.size(); ++i) {
 
-			if (!this->images[i]->isTextureLoaded() && assetName == this->images[i]->getAssetName()) {
-				this->images[i]->setTexture();
-				std::cout << "[FullScreenView] Image loaded: " << assetName << std::endl;
-				break;
-			}
+	for (int i = 0; i < this->images.size(); ++i) {
+		if (!this->images[i]->isTextureLoaded() && assetName == this->images[i]->getAssetName()) {
+			this->images[i]->setTexture();
+
+			//std::cout << "[FullScreenView] Image loaded: " << assetName << std::endl;
+			if (this->images[i]->getAssetName() == this->mainImage->getAssetName())
+				this->images[i]->setBorder();
+			break;
 		}
 	}
+
 }

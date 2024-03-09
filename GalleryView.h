@@ -17,7 +17,7 @@ public:
 	void update(sf::Time deltaTime);
 	void draw(sf::RenderWindow& window);
 
-	void handleDoubleClick(sf::Vector2f mousePosition);
+	std::string handleDoubleClick(sf::Vector2f mousePosition);
 	float computeGalleryHeight();
 
 	void onFinishedExecution(std::string) override;

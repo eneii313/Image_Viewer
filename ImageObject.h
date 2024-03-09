@@ -9,6 +9,8 @@ public:
 	void setTexture();
 	void setPosition(int posX, int posY);
 	void setSizeByTexture();
+	void setBorder();
+
 	bool isMouseOver(const sf::Vector2f& mousePosition);
 	void handleDoubleClick();
 
@@ -27,6 +29,7 @@ private:
 
 	sf::RectangleShape border;
 	bool textureLoaded;
+	bool showBorder = false;
 
 	LoadingIcon* loadingIcon;
 };

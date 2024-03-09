@@ -75,6 +75,11 @@ void ImageObject::setSizeByTexture() {
 	this->sprite.setScale(scaleFactor, scaleFactor);
 }
 
+void ImageObject::setBorder() {
+	this->border.setOutlineColor(sf::Color::White);
+	this->showBorder = true;
+}
+
 bool ImageObject::isTextureLoaded() const {
 	return this->textureLoaded;
 }
@@ -93,6 +98,8 @@ void ImageObject::update(sf::Time deltaTime) {
 void ImageObject::draw(sf::RenderWindow& window) {
 	if (this->textureLoaded) {
 		window.draw(this->sprite);
+		if (this->showBorder)
+			window.draw(border);
 	}
 	else {
 		this->loadingIcon->draw(window);

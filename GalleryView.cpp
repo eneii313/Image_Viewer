@@ -63,7 +63,7 @@ void GalleryView::draw(sf::RenderWindow& window) {
 
 // Load textures for all images
 void GalleryView::loadImageTextures() {
-	ImageManager::getInstance()->loadTextures(this);
+	ImageManager::getInstance()->loadTextures(this, 0, ImageManager::getInstance()->getImageCount());
 }
 
 
@@ -79,15 +79,15 @@ float GalleryView::computeGalleryHeight() {
 }
 
 
-void GalleryView::handleDoubleClick(sf::Vector2f mousePosition) {
+std::string GalleryView::handleDoubleClick(sf::Vector2f mousePosition) {
 	for (auto& imageObject : this->images) {
 		if (imageObject->isMouseOver(mousePosition)) {
 			// Handle double-click event for the image object
 			std::cout << "Double-click on image object detected! Image " << imageObject->getAssetName() << std::endl;
-			FullScreenView::getInstance()->loadImageTextures(imageObject->getAssetName());
-			break;
+			return imageObject->getAssetName();
 		}
 	}
+	return "";
 }
 
 void GalleryView::onFinishedExecution(std::string assetName) {
@@ -98,12 +98,5 @@ void GalleryView::onFinishedExecution(std::string assetName) {
 			//std::cout << "[GalleryView] Image loaded: " << assetName << std::endl;
 			break;
 		}
-		
-		/*
-		if (!this->images[i]->isTextureLoaded()) {
-			this->images[i]->setTexture();
-			std::cout << "[GalleryView] Image loaded: " << i << std::endl;
-		}
-		*/
 	}
 }

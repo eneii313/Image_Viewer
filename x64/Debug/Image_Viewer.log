@@ -9,4 +9,38 @@ C:\Users\JVC\Documents\Y4-T2\STDISCM\STDISCM_Workbench\Image_Viewer\FullScreenVi
 C:\Users\JVC\Documents\Y4-T2\STDISCM\STDISCM_Workbench\Image_Viewer\FullScreenView.cpp(48,31): warning C4244: 'argument': conversion from 'const float' to 'int', possible loss of data
 C:\Users\JVC\Documents\Y4-T2\STDISCM\STDISCM_Workbench\Image_Viewer\FullScreenView.cpp(61,84): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
 C:\Users\JVC\Documents\Y4-T2\STDISCM\STDISCM_Workbench\Image_Viewer\FullScreenView.cpp(61,67): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+  GalleryView.cpp
+C:\Users\JVC\Documents\Y4-T2\STDISCM\STDISCM_Workbench\Image_Viewer\GalleryView.cpp(25,84): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\JVC\Documents\Y4-T2\STDISCM\STDISCM_Workbench\Image_Viewer\GalleryView.cpp(25,67): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\JVC\Documents\Y4-T2\STDISCM\STDISCM_Workbench\Image_Viewer\GalleryView.cpp(40,18): warning C4244: '+=': conversion from 'float' to 'int', possible loss of data
+C:\Users\JVC\Documents\Y4-T2\STDISCM\STDISCM_Workbench\Image_Viewer\GalleryView.cpp(44,19): warning C4244: '+=': conversion from 'float' to 'int', possible loss of data
+  ImageObject.cpp
+C:\Users\JVC\Documents\Y4-T2\STDISCM\STDISCM_Workbench\Image_Viewer\ImageObject.cpp(15,33): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\JVC\Documents\Y4-T2\STDISCM\STDISCM_Workbench\Image_Viewer\ImageObject.cpp(15,27): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\JVC\Documents\Y4-T2\STDISCM\STDISCM_Workbench\Image_Viewer\ImageObject.cpp(21,41): warning C4244: 'argument': conversion from 'int' to 'T', possible loss of data
+C:\Users\JVC\Documents\Y4-T2\STDISCM\STDISCM_Workbench\Image_Viewer\ImageObject.cpp(21,41): warning C4244:         with
+C:\Users\JVC\Documents\Y4-T2\STDISCM\STDISCM_Workbench\Image_Viewer\ImageObject.cpp(21,41): warning C4244:         [
+C:\Users\JVC\Documents\Y4-T2\STDISCM\STDISCM_Workbench\Image_Viewer\ImageObject.cpp(21,41): warning C4244:             T=float
+C:\Users\JVC\Documents\Y4-T2\STDISCM\STDISCM_Workbench\Image_Viewer\ImageObject.cpp(21,41): warning C4244:         ]
+C:\Users\JVC\Documents\Y4-T2\STDISCM\STDISCM_Workbench\Image_Viewer\ImageObject.cpp(21,30): warning C4244: 'argument': conversion from 'int' to 'T', possible loss of data
+C:\Users\JVC\Documents\Y4-T2\STDISCM\STDISCM_Workbench\Image_Viewer\ImageObject.cpp(21,30): warning C4244:         with
+C:\Users\JVC\Documents\Y4-T2\STDISCM\STDISCM_Workbench\Image_Viewer\ImageObject.cpp(21,30): warning C4244:         [
+C:\Users\JVC\Documents\Y4-T2\STDISCM\STDISCM_Workbench\Image_Viewer\ImageObject.cpp(21,30): warning C4244:             T=float
+C:\Users\JVC\Documents\Y4-T2\STDISCM\STDISCM_Workbench\Image_Viewer\ImageObject.cpp(21,30): warning C4244:         ]
+C:\Users\JVC\Documents\Y4-T2\STDISCM\STDISCM_Workbench\Image_Viewer\ImageObject.cpp(52,33): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\JVC\Documents\Y4-T2\STDISCM\STDISCM_Workbench\Image_Viewer\ImageObject.cpp(52,27): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\JVC\Documents\Y4-T2\STDISCM\STDISCM_Workbench\Image_Viewer\ImageObject.cpp(53,33): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\JVC\Documents\Y4-T2\STDISCM\STDISCM_Workbench\Image_Viewer\ImageObject.cpp(53,27): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\JVC\Documents\Y4-T2\STDISCM\STDISCM_Workbench\Image_Viewer\ImageObject.cpp(64,21): warning C4244: 'initializing': conversion from 'T' to 'float', possible loss of data
+C:\Users\JVC\Documents\Y4-T2\STDISCM\STDISCM_Workbench\Image_Viewer\ImageObject.cpp(64,21): warning C4244:         with
+C:\Users\JVC\Documents\Y4-T2\STDISCM\STDISCM_Workbench\Image_Viewer\ImageObject.cpp(64,21): warning C4244:         [
+C:\Users\JVC\Documents\Y4-T2\STDISCM\STDISCM_Workbench\Image_Viewer\ImageObject.cpp(64,21): warning C4244:             T=unsigned int
+C:\Users\JVC\Documents\Y4-T2\STDISCM\STDISCM_Workbench\Image_Viewer\ImageObject.cpp(64,21): warning C4244:         ]
+C:\Users\JVC\Documents\Y4-T2\STDISCM\STDISCM_Workbench\Image_Viewer\ImageObject.cpp(65,22): warning C4244: 'initializing': conversion from 'T' to 'float', possible loss of data
+C:\Users\JVC\Documents\Y4-T2\STDISCM\STDISCM_Workbench\Image_Viewer\ImageObject.cpp(65,22): warning C4244:         with
+C:\Users\JVC\Documents\Y4-T2\STDISCM\STDISCM_Workbench\Image_Viewer\ImageObject.cpp(65,22): warning C4244:         [
+C:\Users\JVC\Documents\Y4-T2\STDISCM\STDISCM_Workbench\Image_Viewer\ImageObject.cpp(65,22): warning C4244:             T=unsigned int
+C:\Users\JVC\Documents\Y4-T2\STDISCM\STDISCM_Workbench\Image_Viewer\ImageObject.cpp(65,22): warning C4244:         ]
+  main.cpp
+  Generating Code...
   Image_Viewer.vcxproj -> C:\Users\JVC\Documents\Y4-T2\STDISCM\STDISCM_Workbench\Image_Viewer\x64\Debug\Image_Viewer.exe

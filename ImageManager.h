@@ -14,8 +14,9 @@ public:
 
 public:
 	static ImageManager* getInstance();
-	void loadTextures(IExecutionEvent* event);
+	void loadTextures(IExecutionEvent* event, int startIndex, int endIndex);
 	void createTexture(String path, String fileName);
+
 	sf::Texture* getImageTexture(const String fileName);
 	String getImageNameAt(const int index);
 	int getImageCount();

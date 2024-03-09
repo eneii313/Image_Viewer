@@ -20,10 +20,10 @@ ImageManager::ImageManager() {
 	this->threadPool->startScheduler();
 }
 
+void ImageManager::loadTextures(IExecutionEvent* event, int startIndex, int endIndex) {
 
-void ImageManager::loadTextures(IExecutionEvent* event) {\
-	for (const auto& file : std::filesystem::directory_iterator(STREAMING_PATH)) {
-		String path = file.path().generic_string();
+	for (int i = startIndex; i < endIndex; ++i) {
+		String path = STREAMING_PATH + this->textureList[i];
 		AssetLoader* assetLoader = new AssetLoader(path, event);
 		this->threadPool->scheduleTask(assetLoader);
 	}
@@ -86,7 +86,7 @@ std::string ImageManager::getImageNameAt(const int index) {
 		return this->textureList[index];
 	else {
 		std::cout << "[ImageManager] Image name at " << index << " DNE" << std::endl;
-		return nullptr;
+		return "";
 	}
 }
 
